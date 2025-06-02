@@ -20,10 +20,10 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main Headline */}
           <h1 className="text-6xl md:text-8xl font-oswald font-bold text-graffiti-white mb-6 graffiti-text animate-glitch">
-            ВИРУСНЫЕ РОЛИКИ
+            МЫ ПРЕВРАЩАЕМ
           </h1>
           <h2 className="text-4xl md:text-6xl font-oswald font-bold text-graffiti-red mb-8">
-            ИЗ ТВОИХ ВИДЕО
+            ТВОИ ВИДЕО В ТЫСЯЧИ РОЛИКОВ
           </h2>
 
           {/* Subtitle */}
@@ -32,7 +32,7 @@ const HeroSection = () => {
             роликов
           </p>
           <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto font-roboto">
-            и выкладываем их с сотен аккаунтов в TikTok, Instagram, YouTube и VK
+            Выкладываем их с сотен аккаунтов в TikTok, Instagram, YouTube и VK
             🎯 Чтобы о тебе узнали ВСЕ!
           </p>
 
