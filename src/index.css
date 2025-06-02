@@ -35,19 +35,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +89,37 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-roboto;
+  }
+}
+
+@layer utilities {
+  .graffiti-text {
+    text-shadow:
+      3px 3px 0px #ffd700,
+      6px 6px 0px #ff0040;
+  }
+
+  .street-shadow {
+    box-shadow:
+      8px 8px 0px #ffd700,
+      16px 16px 0px #ff0040;
+  }
+
+  .tag-border {
+    border: 3px solid #ff0040;
+    border-radius: 0;
+    position: relative;
+  }
+
+  .tag-border::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 2px solid #ffd700;
+    z-index: -1;
   }
 }
