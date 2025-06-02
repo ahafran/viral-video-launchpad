@@ -20,19 +20,20 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main Headline */}
           <h1 className="text-6xl md:text-8xl font-oswald font-bold text-graffiti-white mb-6 graffiti-text animate-glitch">
-            МАССОВЫЙ ПОСТИНГ
+            ВИРУСНЫЕ РОЛИКИ
           </h1>
           <h2 className="text-4xl md:text-6xl font-oswald font-bold text-graffiti-red mb-8">
-            REELS & SHORTS
+            ИЗ ТВОИХ ВИДЕО
           </h2>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-graffiti-white mb-4 font-roboto">
-            Ваш контент — везде и всегда
+            Мы превращаем твои длинные видео в тысячи вирусных 15-секундных
+            роликов
           </p>
           <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto font-roboto">
-            Увеличьте охват и узнаваемость с помощью сотен аккаунтов и
-            профессионального монтажа
+            и выкладываем их с сотен аккаунтов в TikTok, Instagram, YouTube и VK
+            🎯 Чтобы о тебе узнали ВСЕ!
           </p>
 
           {/* CTA Buttons */}
