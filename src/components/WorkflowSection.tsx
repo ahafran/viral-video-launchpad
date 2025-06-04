@@ -2,7 +2,7 @@ const WorkflowSection = () => {
   const steps = [
     {
       number: "01",
-      title: "НАРЕЗКА РОЛИКОВ",
+      title: "МОНТАЖ",
       description:
         "Наши профи режут твои видео на короткие динамичные ролики, которые цепляют и удерживают внимание",
       icon: "🎬",
@@ -65,7 +65,7 @@ const WorkflowSection = () => {
 
               {/* Title */}
               <h3 className="text-2xl font-oswald font-bold text-graffiti-black mb-4 group-hover:animate-glitch">
-                Массовый постинг
+                Монтаж
               </h3>
 
               {/* Description */}
