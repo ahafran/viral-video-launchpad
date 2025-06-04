@@ -65,7 +65,7 @@ const WorkflowSection = () => {
 
               {/* Title */}
               <h3 className="text-2xl font-oswald font-bold text-graffiti-black mb-4 group-hover:animate-glitch">
-                Монтаж
+                Массовый постинг
               </h3>
 
               {/* Description */}
