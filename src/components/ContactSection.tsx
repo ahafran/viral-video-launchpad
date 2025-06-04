@@ -14,7 +14,7 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Данные формы:", formData);
-    alert("Заявка отправлена! Данные сохранены в консоли браузера.");
+    alert("Благодарим за обращение. В ближайшее время мы с вами свяжемся.");
   };
 
   const handleChange = (
