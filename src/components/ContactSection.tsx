@@ -1,7 +1,32 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    tariff: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Данные формы:", formData);
+    alert("Заявка отправлена! Данные сохранены в консоли браузера.");
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
   return (
     <section
       id="contact-section"
@@ -37,44 +62,63 @@ const ContactSection = () => {
               ЗАЯВКА НА СОТРУДНИЧЕСТВО 🚀
             </h3>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Ваше имя *"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full p-4 border-2 border-graffiti-black font-roboto text-lg focus:border-graffiti-red outline-none"
+                  required
                 />
               </div>
 
               <div>
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Телефон *"
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="w-full p-4 border-2 border-graffiti-black font-roboto text-lg focus:border-graffiti-red outline-none"
+                  required
                 />
               </div>
 
               <div>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full p-4 border-2 border-graffiti-black font-roboto text-lg focus:border-graffiti-gold outline-none"
                 />
               </div>
 
               <div>
-                <select className="w-full p-4 border-2 border-graffiti-black font-roboto text-lg focus:border-graffiti-gold outline-none">
-                  <option>Выберите тариф</option>
-                  <option>Базовый - 29 900₽</option>
-                  <option>Стандартный - 49 900₽</option>
-                  <option>Премиум - 99 900₽</option>
+                <select
+                  name="tariff"
+                  value={formData.tariff}
+                  onChange={handleChange}
+                  className="w-full p-4 border-2 border-graffiti-black font-roboto text-lg focus:border-graffiti-gold outline-none"
+                >
+                  <option value="">Выберите тариф</option>
+                  <option value="basic">Базовый - 29 900₽</option>
+                  <option value="standard">Стандартный - 49 900₽</option>
+                  <option value="premium">Премиум - 99 900₽</option>
                 </select>
               </div>
 
               <div>
                 <textarea
+                  name="message"
                   placeholder="Расскажите о вашем проекте..."
                   rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full p-4 border-2 border-graffiti-black font-roboto text-lg focus:border-graffiti-gold outline-none resize-none"
                 ></textarea>
               </div>
