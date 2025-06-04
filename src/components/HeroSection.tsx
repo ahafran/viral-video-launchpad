@@ -1,6 +1,13 @@
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact-section");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black">
       {/* Graffiti Background Elements */}
@@ -48,6 +55,7 @@ const HeroSection = () => {
               variant="outline"
               size="lg"
               className="border-graffiti-gold text-graffiti-gold hover:bg-graffiti-gold hover:text-graffiti-black font-oswald font-bold text-xl px-12 py-6"
+              onClick={scrollToContact}
             >
               СВЯЗАТЬСЯ С НАМИ
             </Button>

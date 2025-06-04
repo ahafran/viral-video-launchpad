@@ -3,7 +3,10 @@ import { Card } from "@/components/ui/card";
 
 const ContactSection = () => {
   return (
-    <section className="py-20 bg-graffiti-white relative overflow-hidden">
+    <section
+      id="contact-section"
+      className="py-20 bg-graffiti-white relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 text-graffiti-black text-9xl font-oswald font-bold rotate-12">
