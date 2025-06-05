@@ -1,57 +1,55 @@
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { Card } from "@/components/ui/card";
 
 const PricingSection = () => {
-  const navigate = useNavigate();
-
   const plans = [
     {
       name: "БАЗОВЫЙ",
-      slug: "basic",
-      description: "Для начинающих",
-      price: "990₽",
-      period: "/мес",
-      color: "graffiti-gold",
+      price: "29 900",
+      period: "/месяц",
+      description: "Для начинающих блогеров",
       features: [
-        "До 5 проектов",
-        "Базовые шаблоны",
-        "Техподдержка в чате",
-        "Стандартные функции",
+        "50 аккаунтов",
+        "100 роликов/месяц",
+        "Базовый монтаж",
+        "Email поддержка",
+        "Статистика",
       ],
       popular: false,
+      color: "graffiti-black",
     },
     {
       name: "СТАНДАРТНЫЙ",
-      slug: "standard",
-      description: "Самый популярный",
-      price: "2990₽",
-      period: "/мес",
-      color: "graffiti-blue",
+      price: "49 900",
+      period: "/месяц",
+      description: "Самый популярный тариф",
       features: [
-        "До 20 проектов",
-        "Все шаблоны + премиум",
-        "Приоритетная поддержка",
-        "Расширенные функции",
-        "API интеграции",
+        "200 аккаунтов",
+        "500 роликов/месяц",
+        "Профи монтаж",
+        "24/7 поддержка",
+        "Аналитика",
+        "Персональный менеджер",
       ],
       popular: true,
+      color: "graffiti-red",
     },
     {
       name: "ПРЕМИУМ",
-      slug: "premium",
-      description: "Максимум возможностей",
-      price: "9990₽",
-      period: "/мес",
-      color: "graffiti-red",
+      price: "99 900",
+      period: "/месяц",
+      description: "Максимальная мощность",
       features: [
-        "Безлимитные проекты",
-        "Все функции + эксклюзив",
-        "VIP поддержка 24/7",
-        "Персональный менеджер",
-        "Белая маркировка",
+        "500+ аккаунтов",
+        "Безлимит роликов",
+        "Экспертный монтаж",
+        "VIP поддержка",
+        "Полная аналитика",
+        "Стратегия продвижения",
+        "Гарантия результата",
       ],
       popular: false,
+      color: "graffiti-gold",
     },
   ];
 
@@ -102,13 +100,7 @@ const PricingSection = () => {
               {/* Plan Name */}
               <div className={`text-center mb-6`}>
                 <h3
-                  className={`text-3xl font-oswald font-bold mb-2 ${
-                    plan.color === "graffiti-gold"
-                      ? "text-graffiti-gold"
-                      : plan.color === "graffiti-blue"
-                        ? "text-graffiti-blue"
-                        : "text-graffiti-red"
-                  }`}
+                  className={`text-3xl font-oswald font-bold text-${plan.color} mb-2`}
                 >
                   {plan.name}
                 </h3>
@@ -118,13 +110,7 @@ const PricingSection = () => {
               {/* Price */}
               <div className="text-center mb-8">
                 <div
-                  className={`text-5xl font-oswald font-bold mb-2 ${
-                    plan.color === "graffiti-gold"
-                      ? "text-graffiti-gold"
-                      : plan.color === "graffiti-blue"
-                        ? "text-graffiti-blue"
-                        : "text-graffiti-red"
-                  }`}
+                  className={`text-5xl font-oswald font-bold text-${plan.color} mb-2`}
                 >
                   {plan.price}
                   <span className="text-lg text-gray-500">{plan.period}</span>
@@ -146,16 +132,13 @@ const PricingSection = () => {
 
               {/* CTA Button */}
               <Button
-                size="lg"
-                className={`font-oswald font-bold text-lg px-8 py-4 transition-all duration-300 hover:scale-105 ${
-                  plan.color === "graffiti-gold"
-                    ? "bg-graffiti-gold text-graffiti-dark hover:bg-yellow-400"
-                    : plan.color === "graffiti-blue"
-                      ? "bg-graffiti-blue text-graffiti-white hover:bg-blue-600"
-                      : "bg-graffiti-red text-graffiti-white hover:bg-red-600"
+                className={`w-full font-oswald font-bold text-lg py-6 ${
+                  plan.popular
+                    ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
+                    : `bg-${plan.color} hover:opacity-90 text-graffiti-white`
                 }`}
               >
-                {plan.buttonText}
+                ВЫБРАТЬ ПЛАН 🚀
               </Button>
             </Card>
           ))}
