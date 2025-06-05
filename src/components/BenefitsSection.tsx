@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const BenefitsSection = () => {
   const benefits = [
     {
@@ -91,10 +89,9 @@ const BenefitsSection = () => {
               </p>
 
               {/* Decorative Line */}
-              <Link
-                to="/guarantee"
-                className={`block w-16 h-1 bg-${benefit.color} mx-auto mt-6 group-hover:w-24 transition-all duration-300 cursor-pointer hover:scale-110`}
-              ></Link>
+              <div
+                className={`w-16 h-1 bg-${benefit.color} mx-auto mt-6 group-hover:w-24 transition-all duration-300`}
+              ></div>
             </div>
           ))}
         </div>
@@ -102,10 +99,7 @@ const BenefitsSection = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="max-w-4xl mx-auto">
-            <Link
-              to="/guarantee"
-              className="block bg-graffiti-black text-graffiti-white p-8 transform -rotate-1 street-shadow hover:scale-105 transition-transform cursor-pointer"
-            >
+            <div className="bg-graffiti-black text-graffiti-white p-8 transform -rotate-1 street-shadow">
               <h3 className="text-3xl font-oswald font-bold mb-4 text-graffiti-gold">
                 ГОТОВЫ СТАТЬ ЗВЕЗДОЙ? 🌟
               </h3>
@@ -113,14 +107,21 @@ const BenefitsSection = () => {
                 Присоединяйтесь к сотням успешных блогеров уже сегодня!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <div className="bg-graffiti-red text-graffiti-white px-6 py-3 font-oswald font-bold inline-block animate-pulse-gold">
+                <div
+                  className="bg-graffiti-red text-graffiti-white px-6 py-3 font-oswald font-bold inline-block animate-pulse-gold cursor-pointer hover:scale-105 transition-transform"
+                  onClick={() => {
+                    const contactSection =
+                      document.querySelector("#contact-section");
+                    contactSection?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
                   ПЕРВЫЙ МЕСЯЦ -50% 🔥
                 </div>
                 <div className="bg-graffiti-gold text-graffiti-black px-6 py-3 font-oswald font-bold inline-block">
                   БЕЗ ДОЛГИХ ДОГОВОРОВ ⚡
                 </div>
               </div>
-            </Link>
+            </div>
           </div>
         </div>
       </div>
