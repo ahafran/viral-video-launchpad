@@ -8,7 +8,6 @@ import NotFound from "./pages/NotFound";
 import PlanBasic from "./pages/PlanBasic";
 import PlanStandard from "./pages/PlanStandard";
 import PlanPremium from "./pages/PlanPremium";
-import Guarantee from "./pages/Guarantee";
 
 const queryClient = new QueryClient();
 
@@ -23,7 +22,6 @@ const App = () => (
           <Route path="/plan-basic" element={<PlanBasic />} />
           <Route path="/plan-standard" element={<PlanStandard />} />
           <Route path="/plan-premium" element={<PlanPremium />} />
-          <Route path="/guarantee" element={<Guarantee />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
