@@ -1,55 +1,57 @@
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const PricingSection = () => {
+  const navigate = useNavigate();
+
   const plans = [
     {
       name: "БАЗОВЫЙ",
-      price: "29 900",
-      period: "/месяц",
-      description: "Для начинающих блогеров",
+      slug: "basic",
+      description: "Для начинающих",
+      price: "990₽",
+      period: "/мес",
+      color: "graffiti-gold",
       features: [
-        "50 аккаунтов",
-        "100 роликов/месяц",
-        "Базовый монтаж",
-        "Email поддержка",
-        "Статистика",
+        "До 5 проектов",
+        "Базовые шаблоны",
+        "Техподдержка в чате",
+        "Стандартные функции",
       ],
       popular: false,
-      color: "graffiti-black",
     },
     {
       name: "СТАНДАРТНЫЙ",
-      price: "49 900",
-      period: "/месяц",
-      description: "Самый популярный тариф",
+      slug: "standard",
+      description: "Самый популярный",
+      price: "2990₽",
+      period: "/мес",
+      color: "graffiti-blue",
       features: [
-        "200 аккаунтов",
-        "500 роликов/месяц",
-        "Профи монтаж",
-        "24/7 поддержка",
-        "Аналитика",
-        "Персональный менеджер",
+        "До 20 проектов",
+        "Все шаблоны + премиум",
+        "Приоритетная поддержка",
+        "Расширенные функции",
+        "API интеграции",
       ],
       popular: true,
-      color: "graffiti-red",
     },
     {
       name: "ПРЕМИУМ",
-      price: "99 900",
-      period: "/месяц",
-      description: "Максимальная мощность",
+      slug: "premium",
+      description: "Максимум возможностей",
+      price: "9990₽",
+      period: "/мес",
+      color: "graffiti-red",
       features: [
-        "500+ аккаунтов",
-        "Безлимит роликов",
-        "Экспертный монтаж",
-        "VIP поддержка",
-        "Полная аналитика",
-        "Стратегия продвижения",
-        "Гарантия результата",
+        "Безлимитные проекты",
+        "Все функции + эксклюзив",
+        "VIP поддержка 24/7",
+        "Персональный менеджер",
+        "Белая маркировка",
       ],
       popular: false,
-      color: "graffiti-gold",
     },
   ];
 
@@ -132,13 +134,11 @@ const PricingSection = () => {
 
               {/* CTA Button */}
               <Button
-                className={`w-full font-oswald font-bold text-lg py-6 ${
-                  plan.popular
-                    ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
-                    : `bg-${plan.color} hover:opacity-90 text-graffiti-white`
-                }`}
+                size="lg"
+                onClick={() => navigate(`/plan/${plan.slug}`)}
+                className={`w-full font-oswald font-bold text-lg py-6 transform hover:scale-105 transition-all duration-300 bg-${plan.color} text-graffiti-white hover:bg-opacity-90`}
               >
-                ВЫБРАТЬ ПЛАН 🚀
+                ВЫБРАТЬ 🚀
               </Button>
             </Card>
           ))}
