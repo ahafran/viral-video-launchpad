@@ -6,126 +6,69 @@ import Icon from "@/components/ui/icon";
 const PlanPremium = () => {
   const navigate = useNavigate();
 
-  const features = [
-    "Безлимитные проекты",
-    "Все функции + эксклюзив",
-    "VIP поддержка 24/7",
-    "Персональный менеджер",
-    "Белая маркировка",
-    "Продвинутая аналитика",
-    "Кастомные интеграции",
-    "Приоритетные обновления",
-  ];
-
   return (
-    <div className="min-h-screen bg-graffiti-dark">
-      {/* Header */}
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black py-20">
+      <div className="container mx-auto px-4">
         <Button
           onClick={() => navigate("/")}
-          variant="outline"
-          className="mb-8 bg-graffiti-white text-graffiti-dark hover:bg-gray-100"
+          className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
         >
-          <Icon name="ArrowLeft" className="mr-2" size={16} />
+          <Icon name="ArrowLeft" className="mr-2" />
           Назад к тарифам
         </Button>
-      </div>
 
-      {/* Premium Badge */}
-      <div className="text-center mb-8">
-        <div className="inline-block bg-gradient-to-r from-graffiti-red to-graffiti-gold text-graffiti-white px-8 py-3 font-oswald font-bold text-lg transform -rotate-2 animate-pulse-gold">
-          👑 ПРЕМИУМ УРОВЕНЬ 👑
-        </div>
-      </div>
+        <Card className="max-w-2xl mx-auto p-12 bg-graffiti-white">
+          <div className="text-center">
+            <h1 className="text-5xl font-oswald font-bold text-graffiti-gold mb-4">
+              ПРЕМИУМ ПЛАН
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">Максимальная мощность</p>
 
-      {/* Hero Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-6xl md:text-7xl font-oswald font-bold text-graffiti-red mb-6 graffiti-text">
-            ПРЕМИУМ ПЛАН
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 font-roboto">
-            Максимум возможностей для профессионалов
-          </p>
+            <div className="text-6xl font-oswald font-bold text-graffiti-gold mb-8">
+              99 900<span className="text-xl text-gray-500">/месяц</span>
+            </div>
 
-          <div className="text-5xl font-oswald font-bold text-graffiti-red mb-12">
-            9990₽
-            <span className="text-lg text-gray-400">/месяц</span>
-          </div>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
-          <Card className="p-8 bg-graffiti-white border-4 border-graffiti-red">
-            <h3 className="text-2xl font-oswald font-bold text-graffiti-dark mb-6">
-              Эксклюзивные возможности:
-            </h3>
-            <ul className="space-y-4">
-              {features.map((feature, index) => (
-                <li
-                  key={index}
-                  className="flex items-center text-gray-700 font-roboto"
-                >
-                  <Icon
-                    name="Crown"
-                    className="text-graffiti-red mr-3"
-                    size={20}
-                  />
-                  {feature}
+            <div className="text-left mb-8">
+              <h3 className="text-2xl font-oswald font-bold mb-4">
+                Что включено:
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
+                  500+ аккаунтов
                 </li>
-              ))}
-            </ul>
-          </Card>
+                <li className="flex items-center">
+                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
+                  Безлимит роликов
+                </li>
+                <li className="flex items-center">
+                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
+                  Экспертный монтаж
+                </li>
+                <li className="flex items-center">
+                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
+                  VIP поддержка
+                </li>
+                <li className="flex items-center">
+                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
+                  Полная аналитика
+                </li>
+                <li className="flex items-center">
+                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
+                  Стратегия продвижения
+                </li>
+                <li className="flex items-center">
+                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
+                  Гарантия результата
+                </li>
+              </ul>
+            </div>
 
-          <Card className="p-8 bg-gradient-to-br from-graffiti-red to-graffiti-gold text-white">
-            <h3 className="text-2xl font-oswald font-bold mb-6">
-              Премиум преимущества:
-            </h3>
-            <ul className="space-y-4 font-roboto">
-              <li className="flex items-start">
-                <Icon
-                  name="Rocket"
-                  className="text-white mr-3 mt-1"
-                  size={20}
-                />
-                Первый доступ к новым функциям
-              </li>
-              <li className="flex items-start">
-                <Icon
-                  name="Shield"
-                  className="text-white mr-3 mt-1"
-                  size={20}
-                />
-                Максимальная безопасность
-              </li>
-              <li className="flex items-start">
-                <Icon
-                  name="Headphones"
-                  className="text-white mr-3 mt-1"
-                  size={20}
-                />
-                Персональная поддержка
-              </li>
-              <li className="flex items-start">
-                <Icon name="Star" className="text-white mr-3 mt-1" size={20} />
-                Эксклюзивные инструменты
-              </li>
-            </ul>
-          </Card>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-graffiti-red to-graffiti-gold text-graffiti-white font-oswald font-bold text-xl px-12 py-6 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            СТАТЬ ПРЕМИУМ 👑
-          </Button>
-          <p className="text-sm text-gray-400 mt-4 font-roboto">
-            Для тех, кто выбирает лучшее
-          </p>
-        </div>
+            <Button className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-xl py-6">
+              ОФОРМИТЬ ПОДПИСКУ 🚀
+            </Button>
+          </div>
+        </Card>
       </div>
     </div>
   );

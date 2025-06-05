@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const PricingSection = () => {
+  const navigate = useNavigate();
   const plans = [
     {
       name: "БАЗОВЫЙ",
@@ -132,6 +134,14 @@ const PricingSection = () => {
 
               {/* CTA Button */}
               <Button
+                onClick={() => {
+                  const routes = [
+                    "/plan-basic",
+                    "/plan-standard",
+                    "/plan-premium",
+                  ];
+                  navigate(routes[index]);
+                }}
                 className={`w-full font-oswald font-bold text-lg py-6 ${
                   plan.popular
                     ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
