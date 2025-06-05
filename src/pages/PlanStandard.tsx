@@ -28,42 +28,72 @@ const PlanStandard = () => {
             <h1 className="text-5xl font-oswald font-bold text-graffiti-red mb-4">
               СТАНДАРТНЫЙ ПЛАН
             </h1>
-            <p className="text-xl text-gray-600 mb-8">Самый популярный тариф</p>
+            <p className="text-xl text-gray-600 mb-8">200 роликов в день</p>
 
-            <div className="text-6xl font-oswald font-bold text-graffiti-red mb-8">
-              49 900<span className="text-xl text-gray-500">/месяц</span>
+            <div className="text-6xl font-oswald font-bold text-graffiti-red mb-2">
+              454 000<span className="text-xl text-gray-500"> ₽/месяц</span>
+            </div>
+            <div className="text-lg text-gray-500 mb-8">
+              Или 4 358 000 ₽/год (скидка 20%)
             </div>
 
             <div className="text-left mb-8">
               <h3 className="text-2xl font-oswald font-bold mb-4">
-                Что включено:
+                Что входит:
               </h3>
               <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  200 аккаунтов
+                <li className="flex items-start">
+                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                    ✓
+                  </span>
+                  <span>
+                    Публикация 200 роликов ежедневно на всех ключевых платформах
+                    (TikTok, YouTube, Instagram, VK)
+                  </span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  500 роликов/месяц
+                <li className="flex items-start">
+                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                    ✓
+                  </span>
+                  <span>
+                    Использование 67 аккаунтов для максимально широкого охвата
+                  </span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  Профи монтаж
+                <li className="flex items-start">
+                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                    ✓
+                  </span>
+                  <span>
+                    Профессиональный монтаж роликов с высокой частотой
+                    обновления контента
+                  </span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  24/7 поддержка
+                <li className="flex items-start">
+                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                    ✓
+                  </span>
+                  <span>
+                    Работа команды исполнителей и монтажёров с контролем
+                    качества
+                  </span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  Аналитика
-                </li>
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  Персональный менеджер
+                <li className="flex items-start">
+                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                    ✓
+                  </span>
+                  <span>
+                    Подробная аналитика и рекомендации по улучшению стратегии
+                  </span>
                 </li>
               </ul>
+
+              <h3 className="text-xl font-oswald font-bold mt-6 mb-2">
+                Для кого:
+              </h3>
+              <p className="text-gray-600">
+                Для известных блогеров, музыкальных артистов и брендов, которым
+                необходим мощный и системный рост аудитории.
+              </p>
             </div>
 
             <Button className="w-full bg-graffiti-red hover:bg-red-600 text-graffiti-white font-oswald font-bold text-xl py-6 street-shadow">

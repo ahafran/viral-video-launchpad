@@ -22,46 +22,65 @@ const PlanPremium = () => {
             <h1 className="text-5xl font-oswald font-bold text-graffiti-gold mb-4">
               ПРЕМИУМ ПЛАН
             </h1>
-            <p className="text-xl text-gray-600 mb-8">Максимальная мощность</p>
+            <p className="text-xl text-gray-600 mb-8">500 роликов в день</p>
 
-            <div className="text-6xl font-oswald font-bold text-graffiti-gold mb-8">
-              99 900<span className="text-xl text-gray-500">/месяц</span>
+            <div className="text-6xl font-oswald font-bold text-graffiti-gold mb-2">
+              1 134 400<span className="text-xl text-gray-500"> ₽/месяц</span>
+            </div>
+            <div className="text-lg text-gray-500 mb-8">
+              Или 10 890 240 ₽/год (скидка 20%)
             </div>
 
             <div className="text-left mb-8">
               <h3 className="text-2xl font-oswald font-bold mb-4">
-                Что включено:
+                Что входит:
               </h3>
               <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  500+ аккаунтов
+                <li className="flex items-start">
+                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                    ✓
+                  </span>
+                  <span>
+                    Публикация 500 роликов ежедневно на всех ключевых платформах
+                    (TikTok, YouTube, Instagram, VK)
+                  </span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  Безлимит роликов
+                <li className="flex items-start">
+                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                    ✓
+                  </span>
+                  <span>
+                    Персональный менеджер, который курирует весь процесс
+                    продвижения
+                  </span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  Экспертный монтаж
+                <li className="flex items-start">
+                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                    ✓
+                  </span>
+                  <span>
+                    Индивидуальные решения по монтажу и адаптации контента под
+                    тренды
+                  </span>
                 </li>
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  VIP поддержка
-                </li>
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  Полная аналитика
-                </li>
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  Стратегия продвижения
-                </li>
-                <li className="flex items-center">
-                  <span className="text-graffiti-gold mr-3 text-xl">✓</span>
-                  Гарантия результата
+                <li className="flex items-start">
+                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                    ✓
+                  </span>
+                  <span>
+                    Ежемесячные отчёты и аналитика с рекомендациями по улучшению
+                    ROI
+                  </span>
                 </li>
               </ul>
+
+              <h3 className="text-xl font-oswald font-bold mt-6 mb-2">
+                Для кого:
+              </h3>
+              <p className="text-gray-600">
+                Для топовых звёзд, крупных брендов и агентств, которым важно
+                доминировать в медиа пространстве и быстро наращивать охваты.
+              </p>
             </div>
 
             <Button className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-xl py-6">
