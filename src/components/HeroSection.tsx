@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   const scrollToContact = () => {
-    const contactSection = document.getElementById("contact-section");
+    const contactSection = document.getElementById("contacts");
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" });
     }
