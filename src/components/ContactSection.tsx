@@ -1,8 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { toast } from "sonner";
 
 const ContactSection = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast.success(
+      "Благодарим за обращение! В ближайшее время мы с вами свяжемся.",
+    );
+  };
+
   return (
     <section id="contacts" className="py-20 bg-graffiti-black">
       <div className="container mx-auto px-4">
@@ -21,7 +29,7 @@ const ContactSection = () => {
             <h3 className="text-3xl font-oswald font-bold mb-6 text-graffiti-black">
               Заявка на сотрудничество
             </h3>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
