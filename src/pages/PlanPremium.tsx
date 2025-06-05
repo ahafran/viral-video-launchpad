@@ -118,7 +118,7 @@ const PlanPremium = () => {
         <div className="text-center">
           <Button
             size="lg"
-            className="bg-gradient-to-r from-graffiti-red to-graffiti-gold text-graffiti-white font-oswald font-bold text-xl px-12 py-6 hover:scale-105 transform transition-all duration-300 shadow-2xl"
+            className="bg-gradient-to-r from-graffiti-red to-graffiti-gold text-graffiti-white font-oswald font-bold text-xl px-12 py-6 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             СТАТЬ ПРЕМИУМ 👑
           </Button>

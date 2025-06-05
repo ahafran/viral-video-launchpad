@@ -102,7 +102,13 @@ const PricingSection = () => {
               {/* Plan Name */}
               <div className={`text-center mb-6`}>
                 <h3
-                  className={`text-3xl font-oswald font-bold text-${plan.color} mb-2`}
+                  className={`text-3xl font-oswald font-bold mb-2 ${
+                    plan.color === "graffiti-gold"
+                      ? "text-graffiti-gold"
+                      : plan.color === "graffiti-blue"
+                        ? "text-graffiti-blue"
+                        : "text-graffiti-red"
+                  }`}
                 >
                   {plan.name}
                 </h3>
@@ -112,7 +118,13 @@ const PricingSection = () => {
               {/* Price */}
               <div className="text-center mb-8">
                 <div
-                  className={`text-5xl font-oswald font-bold text-${plan.color} mb-2`}
+                  className={`text-5xl font-oswald font-bold mb-2 ${
+                    plan.color === "graffiti-gold"
+                      ? "text-graffiti-gold"
+                      : plan.color === "graffiti-blue"
+                        ? "text-graffiti-blue"
+                        : "text-graffiti-red"
+                  }`}
                 >
                   {plan.price}
                   <span className="text-lg text-gray-500">{plan.period}</span>
@@ -135,10 +147,15 @@ const PricingSection = () => {
               {/* CTA Button */}
               <Button
                 size="lg"
-                onClick={() => navigate(`/plan/${plan.slug}`)}
-                className={`w-full font-oswald font-bold text-lg py-6 transform hover:scale-105 transition-all duration-300 bg-${plan.color} text-graffiti-white hover:bg-opacity-90`}
+                className={`font-oswald font-bold text-lg px-8 py-4 transition-all duration-300 hover:scale-105 ${
+                  plan.color === "graffiti-gold"
+                    ? "bg-graffiti-gold text-graffiti-dark hover:bg-yellow-400"
+                    : plan.color === "graffiti-blue"
+                      ? "bg-graffiti-blue text-graffiti-white hover:bg-blue-600"
+                      : "bg-graffiti-red text-graffiti-white hover:bg-red-600"
+                }`}
               >
-                ВЫБРАТЬ 🚀
+                {plan.buttonText}
               </Button>
             </Card>
           ))}

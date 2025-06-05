@@ -104,7 +104,7 @@ const PlanBasic = () => {
         <div className="text-center">
           <Button
             size="lg"
-            className="bg-graffiti-gold text-graffiti-dark font-oswald font-bold text-xl px-12 py-6 hover:bg-yellow-400 transform hover:scale-105 transition-all duration-300"
+            className="bg-graffiti-gold text-graffiti-dark font-oswald font-bold text-xl px-12 py-6 hover:bg-yellow-400 transition-all duration-300 hover:scale-105"
           >
             НАЧАТЬ С БАЗОВОГО ПЛАНА 🚀
           </Button>

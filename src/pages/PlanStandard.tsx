@@ -113,7 +113,7 @@ const PlanStandard = () => {
         <div className="text-center">
           <Button
             size="lg"
-            className="bg-graffiti-blue text-graffiti-white font-oswald font-bold text-xl px-12 py-6 hover:bg-blue-600 transform hover:scale-105 transition-all duration-300"
+            className="bg-graffiti-blue text-graffiti-white font-oswald font-bold text-xl px-12 py-6 hover:bg-blue-600 transition-all duration-300 hover:scale-105"
           >
             ВЫБРАТЬ СТАНДАРТНЫЙ 💎
           </Button>
