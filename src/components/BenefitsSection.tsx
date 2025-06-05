@@ -107,7 +107,14 @@ const BenefitsSection = () => {
                 Присоединяйтесь к сотням успешных блогеров уже сегодня!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <div className="bg-graffiti-red text-graffiti-white px-6 py-3 font-oswald font-bold inline-block animate-pulse-gold">
+                <div
+                  className="bg-graffiti-red text-graffiti-white px-6 py-3 font-oswald font-bold inline-block animate-pulse-gold cursor-pointer hover:scale-105 transition-transform"
+                  onClick={() => {
+                    const contactSection =
+                      document.querySelector("#contact-section");
+                    contactSection?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
                   ПЕРВЫЙ МЕСЯЦ -50% 🔥
                 </div>
                 <div className="bg-graffiti-gold text-graffiti-black px-6 py-3 font-oswald font-bold inline-block">

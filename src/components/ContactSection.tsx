@@ -30,7 +30,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact-section"
-      className="py-20 bg-graffiti-white relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-graffiti-purple to-graffiti-blue"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
