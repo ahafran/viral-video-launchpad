@@ -157,9 +157,12 @@ const PricingSection = () => {
 
         {/* Money Back Guarantee */}
         <div className="text-center mt-16">
-          <div className="inline-block bg-graffiti-gold text-graffiti-black px-8 py-4 font-oswald font-bold text-xl transform rotate-2">
+          <button
+            onClick={() => navigate("/guarantee")}
+            className="inline-block bg-graffiti-gold text-graffiti-black px-8 py-4 font-oswald font-bold text-xl transform rotate-2 hover:scale-105 transition-transform cursor-pointer"
+          >
             ГАРАНТИЯ ВОЗВРАТА 30 ДНЕЙ! 💯
-          </div>
+          </button>
         </div>
       </div>
     </section>
