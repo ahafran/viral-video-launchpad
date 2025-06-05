@@ -54,7 +54,10 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black relative overflow-hidden">
+    <section
+      id="pricing"
+      className="py-20 bg-gradient-to-b from-graffiti-black to-gray-900"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 text-graffiti-gold text-9xl font-oswald font-bold rotate-12 animate-spray">

@@ -10,7 +10,14 @@ const PlanPremium = () => {
     <div className="min-h-screen bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black py-20">
       <div className="container mx-auto px-4">
         <Button
-          onClick={() => navigate("/")}
+          onClick={() => {
+            navigate("/");
+            setTimeout(() => {
+              document
+                .getElementById("pricing")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+          }}
           className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
         >
           <Icon name="ArrowLeft" className="mr-2" />
