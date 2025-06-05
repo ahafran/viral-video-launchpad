@@ -76,7 +76,7 @@ const PricingSection = () => {
 
           {/* Discount Banner */}
           <div className="inline-block bg-graffiti-red text-graffiti-white px-6 py-2 font-oswald font-bold text-lg transform rotate-2 mt-6 animate-pulse-gold">
-            СКИДКА 30% НА ГОДОВУЮ ПОДПИСКУ! 🔥
+            СКИДКА 20% НА ГОДОВУЮ ПОДПИСКУ! 🔥
           </div>
         </div>
 
