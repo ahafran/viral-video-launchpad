@@ -24,8 +24,8 @@ const PlanStandard = () => {
           Назад к тарифам
         </Button>
 
-        <Card className="max-w-2xl mx-auto p-12 bg-graffiti-white ring-4 ring-graffiti-red">
-          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+        <Card className="max-w-2xl mx-auto p-12 bg-graffiti-white ring-4 ring-graffiti-red relative">
+          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
             <div className="bg-graffiti-red text-graffiti-white px-6 py-2 font-oswald font-bold text-sm transform -rotate-2">
               ПОПУЛЯРНЫЙ! ⭐
             </div>
