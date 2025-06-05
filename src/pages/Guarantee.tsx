@@ -93,7 +93,7 @@ const Guarantee = () => {
                 </p>
                 <button
                   onClick={() => {
-                    window.location.href = "/#contact-section";
+                    window.location.href = "/#contacts";
                   }}
                   className="bg-graffiti-red text-graffiti-white px-8 py-3 font-oswald font-bold hover:scale-105 transition-transform"
                 >
