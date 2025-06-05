@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const BenefitsSection = () => {
   const benefits = [
     {
@@ -89,9 +91,10 @@ const BenefitsSection = () => {
               </p>
 
               {/* Decorative Line */}
-              <div
-                className={`w-16 h-1 bg-${benefit.color} mx-auto mt-6 group-hover:w-24 transition-all duration-300`}
-              ></div>
+              <Link
+                to="/guarantee"
+                className={`block w-16 h-1 bg-${benefit.color} mx-auto mt-6 group-hover:w-24 transition-all duration-300 cursor-pointer hover:scale-110`}
+              ></Link>
             </div>
           ))}
         </div>
