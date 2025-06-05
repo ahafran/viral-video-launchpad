@@ -31,7 +31,7 @@ const PlanPremium = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8">500 роликов в день</p>
 
-            <div className="text-6xl font-oswald font-bold text-graffiti-gold mb-2">
+            <div className="text-6xl font-oswald font-bold text-graffiti-gold mb-2 whitespace-nowrap">
               1 134 000<span className="text-xl text-gray-500"> ₽/месяц</span>
             </div>
             <div className="text-lg text-gray-500 mb-8">
