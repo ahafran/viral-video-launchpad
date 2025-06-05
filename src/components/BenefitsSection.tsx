@@ -85,7 +85,7 @@ const BenefitsSection = () => {
 
               {/* Description */}
               <p className="text-gray-600 font-roboto leading-relaxed">
-                Полная автоматизация процесса. Вся система работает как часы.
+                {benefit.description}
               </p>
 
               {/* Decorative Line */}
