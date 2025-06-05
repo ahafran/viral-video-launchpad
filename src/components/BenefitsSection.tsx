@@ -80,7 +80,7 @@ const BenefitsSection = () => {
               <h3
                 className={`text-2xl font-oswald font-bold text-${benefit.color} mb-4 group-hover:animate-glitch`}
               >
-                {benefit.title}
+                Опыт
               </h3>
 
               {/* Description */}
