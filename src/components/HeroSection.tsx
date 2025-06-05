@@ -48,6 +48,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               className="bg-graffiti-red hover:bg-red-600 text-graffiti-white font-oswald font-bold text-xl px-12 py-6 street-shadow animate-pulse-gold"
+              onClick={scrollToContact}
             >
               ПОПРОБОВАТЬ БЕСПЛАТНО 🚀
             </Button>
