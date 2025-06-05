@@ -1,14 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Icon from "@/components/ui/icon";
-import { toast } from "sonner";
+import { useState } from "react";
 
 const ContactSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(
-      "Благодарим за обращение! В ближайшее время мы с вами свяжемся.",
-    );
+    setIsOpen(true);
   };
 
   return (
@@ -92,13 +93,31 @@ const ContactSection = () => {
                 ></textarea>
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-graffiti-red hover:bg-red-600 text-white font-oswald font-bold text-lg py-4"
-              >
-                <Icon name="Send" className="mr-2" />
-                ОТПРАВИТЬ ЗАЯВКУ
-              </Button>
+              <Dialog open={isOpen} onOpenChange={setIsOpen}>
+                <Button
+                  type="submit"
+                  className="w-full bg-graffiti-red hover:bg-red-600 text-white font-oswald font-bold text-lg py-4"
+                >
+                  <Icon name="Send" className="mr-2" />
+                  ОТПРАВИТЬ ЗАЯВКУ
+                </Button>
+                <DialogContent className="bg-graffiti-white max-w-md">
+                  <div className="text-center py-6">
+                    <Icon
+                      name="CheckCircle"
+                      className="mx-auto mb-4 text-green-500"
+                      size={48}
+                    />
+                    <h3 className="text-xl font-oswald font-bold mb-2">
+                      Спасибо!
+                    </h3>
+                    <p className="text-gray-600">
+                      Благодарим за обращение! В ближайшее время мы с вами
+                      свяжемся.
+                    </p>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </form>
           </Card>
 
