@@ -94,7 +94,16 @@ const PlanStandard = () => {
               </p>
             </div>
 
-            <Button className="w-full bg-graffiti-red hover:bg-red-600 text-graffiti-white font-oswald font-bold text-xl py-6 street-shadow">
+            <Button
+              onClick={() => {
+                navigate("/");
+                setTimeout(() => {
+                  const contactSection = document.getElementById("contacts");
+                  contactSection?.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+              className="w-full bg-graffiti-red hover:bg-red-600 text-graffiti-white font-oswald font-bold text-xl py-6 street-shadow"
+            >
               ОФОРМИТЬ ПОДПИСКУ 🚀
             </Button>
           </div>

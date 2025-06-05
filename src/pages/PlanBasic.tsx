@@ -74,7 +74,16 @@ const PlanBasic = () => {
               </p>
             </div>
 
-            <Button className="w-full bg-graffiti-black hover:bg-gray-800 text-graffiti-white font-oswald font-bold text-xl py-6">
+            <Button
+              onClick={() => {
+                navigate("/");
+                setTimeout(() => {
+                  const contactSection = document.getElementById("contacts");
+                  contactSection?.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+              className="w-full bg-graffiti-black hover:bg-gray-800 text-graffiti-white font-oswald font-bold text-xl py-6"
+            >
               ОФОРМИТЬ ПОДПИСКУ 🚀
             </Button>
           </div>

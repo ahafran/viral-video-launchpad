@@ -83,7 +83,16 @@ const PlanPremium = () => {
               </p>
             </div>
 
-            <Button className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-xl py-6">
+            <Button
+              onClick={() => {
+                navigate("/");
+                setTimeout(() => {
+                  const contactSection = document.getElementById("contacts");
+                  contactSection?.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+              className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-xl py-6"
+            >
               ОФОРМИТЬ ПОДПИСКУ 🚀
             </Button>
           </div>
