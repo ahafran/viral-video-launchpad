@@ -13,66 +13,66 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contacts" className="py-20 bg-graffiti-black">
+    <section id="contacts" className="py-20 bg-graffiti-black dark:bg-gray-950">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-oswald font-bold text-graffiti-white mb-4">
+          <h2 className="text-4xl font-oswald font-bold text-graffiti-white dark:text-white mb-4">
             СВЯЗАТЬСЯ С НАМИ
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 dark:text-gray-400 max-w-2xl mx-auto">
             Готовы начать? Свяжитесь с нами для обсуждения вашего проекта
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-8">
           {/* Форма заявки */}
-          <Card className="lg:col-span-2 p-8 bg-graffiti-white">
-            <h3 className="text-3xl font-oswald font-bold mb-6 text-graffiti-black">
+          <Card className="lg:col-span-2 p-8 bg-graffiti-white dark:bg-gray-800">
+            <h3 className="text-3xl font-oswald font-bold mb-6 text-graffiti-black dark:text-white">
               Заявка на сотрудничество
             </h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Имя *
                   </label>
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
                     placeholder="Ваше имя"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Телефон *
                   </label>
                   <input
                     type="tel"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
                     placeholder="+7 (999) 123-45-67"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Email *
                 </label>
                 <input
                   type="email"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
                   placeholder="your@email.com"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Тариф
                 </label>
-                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent">
+                <select className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white">
                   <option value="">Выберите тариф</option>
                   <option value="basic">Базовый (50 роликов/день)</option>
                   <option value="standard">
@@ -83,12 +83,12 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Сообщение
                 </label>
                 <textarea
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
                   placeholder="Расскажите о вашем проекте..."
                 ></textarea>
               </div>

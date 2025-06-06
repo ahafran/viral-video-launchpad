@@ -9,16 +9,16 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black dark:from-gray-950 dark:via-black dark:to-gray-950">
       {/* Graffiti Background Elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-10 text-graffiti-gold text-9xl font-oswald font-bold rotate-12 animate-pulse-gold">
+      <div className="absolute inset-0 opacity-20 dark:opacity-30">
+        <div className="absolute top-20 left-10 text-graffiti-gold dark:text-yellow-400 text-9xl font-oswald font-bold rotate-12 animate-pulse-gold">
           $
         </div>
-        <div className="absolute bottom-32 right-16 text-graffiti-red text-7xl font-oswald font-bold -rotate-12 animate-spray">
+        <div className="absolute bottom-32 right-16 text-graffiti-red dark:text-red-400 text-7xl font-oswald font-bold -rotate-12 animate-spray">
           ♠
         </div>
-        <div className="absolute top-1/2 left-1/4 text-graffiti-gold text-5xl font-oswald font-bold rotate-45 opacity-50">
+        <div className="absolute top-1/2 left-1/4 text-graffiti-gold dark:text-yellow-400 text-5xl font-oswald font-bold rotate-45 opacity-50">
           ★
         </div>
       </div>
@@ -26,19 +26,19 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Main Headline */}
-          <h1 className="text-6xl md:text-8xl font-oswald font-bold text-graffiti-white mb-6 graffiti-text animate-glitch">
+          <h1 className="text-6xl md:text-8xl font-oswald font-bold text-graffiti-white dark:text-white mb-6 graffiti-text animate-glitch">
             МАССОВЫЙ ПОСТИНГ
           </h1>
-          <h2 className="text-4xl md:text-6xl font-oswald font-bold text-graffiti-red mb-8">
+          <h2 className="text-4xl md:text-6xl font-oswald font-bold text-graffiti-red dark:text-red-400 mb-8">
             REELS & SHORTS
           </h2>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-graffiti-white mb-4 font-roboto">
+          <p className="text-xl md:text-2xl text-graffiti-white dark:text-gray-100 mb-4 font-roboto">
             Мы превращаем твои длинные видео в тысячи вирусных 15-секундных
             роликов
           </p>
-          <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto font-roboto">
+          <p className="text-lg text-gray-300 dark:text-gray-400 mb-12 max-w-2xl mx-auto font-roboto">
             Выкладываем их с сотен аккаунтов в TikTok, Instagram, YouTube и VK
             🎯 Чтобы о тебе узнали ВСЕ!
           </p>
@@ -47,7 +47,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button
               size="lg"
-              className="bg-graffiti-red hover:bg-red-600 text-graffiti-white font-oswald font-bold text-xl px-12 py-6 street-shadow animate-pulse-gold"
+              className="bg-graffiti-red hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-graffiti-white dark:text-white font-oswald font-bold text-xl px-12 py-6 street-shadow animate-pulse-gold"
               onClick={scrollToContact}
             >
               ПОПРОБОВАТЬ БЕСПЛАТНО 🚀

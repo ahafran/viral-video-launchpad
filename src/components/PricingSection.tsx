@@ -54,41 +54,25 @@ const PricingSection = () => {
   ];
 
   return (
-    <section
-      id="pricing"
-      className="py-20 bg-gradient-to-b from-graffiti-black to-gray-900"
-    >
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 text-graffiti-gold text-9xl font-oswald font-bold rotate-12 animate-spray">
-          ₽
-        </div>
-        <div className="absolute bottom-32 right-16 text-graffiti-red text-7xl font-oswald font-bold -rotate-12">
-          💰
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-oswald font-bold text-graffiti-white mb-6 graffiti-text">
-            ТАРИФЫ
+          <h2 className="text-4xl font-oswald font-bold text-graffiti-black dark:text-white mb-4">
+            НАШИ ТАРИФЫ
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto font-roboto">
-            Выберите план, который подходит именно вам
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Выберите подходящий план для масштабирования вашего контента
           </p>
-
-          {/* Discount Banner */}
-          <div className="inline-block bg-graffiti-red text-graffiti-white px-6 py-2 font-oswald font-bold text-lg transform rotate-2 mt-6 animate-pulse-gold">
-            СКИДКА 20% НА ГОДОВУЮ ПОДПИСКУ! 🔥
-          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className={`relative p-8 bg-graffiti-white transform hover:scale-105 transition-all duration-300 ${
-                plan.popular ? "ring-4 ring-graffiti-red scale-105" : ""
+              className={`relative p-8 transition-all duration-300 hover:scale-105 ${
+                plan.popular
+                  ? "border-graffiti-red dark:border-red-400 shadow-2xl bg-white dark:bg-gray-800"
+                  : "bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700"
               }`}
             >
               {/* Popular Badge */}
