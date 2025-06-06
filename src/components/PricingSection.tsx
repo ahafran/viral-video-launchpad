@@ -137,7 +137,7 @@ const PricingSection = () => {
                   plan.popular
                     ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
                     : plan.color === "graffiti-yellow"
-                      ? "bg-graffiti-yellow hover:bg-yellow-500 text-graffiti-black dark:bg-yellow-400 dark:hover:bg-yellow-300 dark:text-black"
+                      ? "bg-graffiti-yellow hover:bg-yellow-600 text-graffiti-black border-2 border-gray-800 dark:bg-yellow-400 dark:hover:bg-yellow-300 dark:text-black dark:border-yellow-300"
                       : `bg-${plan.color} hover:opacity-90 text-graffiti-white`
                 }`}
               >
