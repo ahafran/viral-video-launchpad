@@ -136,7 +136,9 @@ const PricingSection = () => {
                 className={`w-full font-oswald font-bold text-base sm:text-lg py-4 sm:py-6 ${
                   plan.popular
                     ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
-                    : `bg-${plan.color} hover:opacity-90 text-graffiti-white`
+                    : plan.color === "graffiti-yellow"
+                      ? "bg-graffiti-yellow hover:bg-yellow-500 text-graffiti-black dark:bg-yellow-400 dark:hover:bg-yellow-300 dark:text-black"
+                      : `bg-${plan.color} hover:opacity-90 text-graffiti-white`
                 }`}
               >
                 ВЫБРАТЬ ПЛАН 🚀
