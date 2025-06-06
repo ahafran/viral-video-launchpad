@@ -1,10 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
 const PlanStandard = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black py-20">
@@ -16,7 +21,7 @@ const PlanStandard = () => {
               document
                 .getElementById("pricing")
                 ?.scrollIntoView({ behavior: "smooth" });
-            }, 100);
+            }, 300);
           }}
           className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
         >

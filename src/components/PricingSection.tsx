@@ -49,19 +49,19 @@ const PricingSection = () => {
         "Анализ ROI",
       ],
       popular: false,
-      color: "graffiti-gold",
+      color: "graffiti-yellow",
     },
   ];
 
   return (
-    <section className="py-12 sm:py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-oswald font-bold text-graffiti-black dark:text-white mb-3 sm:mb-4 px-2">
-            НАШИ ТАРИФЫ
+    <section className="py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Наши тарифы
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-2">
-            Выберите подходящий план для масштабирования вашего контента
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Выберите подходящий план для вашего контента
           </p>
         </div>
 
@@ -149,7 +149,7 @@ const PricingSection = () => {
         <div className="text-center mt-12 sm:mt-16 px-4">
           <button
             onClick={() => navigate("/guarantee")}
-            className="inline-block bg-graffiti-gold text-graffiti-black px-6 sm:px-8 py-3 sm:py-4 font-oswald font-bold text-lg sm:text-xl transform rotate-2 hover:scale-105 transition-transform cursor-pointer"
+            className="inline-block bg-graffiti-gold text-graffiti-black px-6 sm:px-8 py-3 sm:py-4 font-oswald font-bold text-lg sm:text-xl transform rotate-2 hover:scale-105 hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:bg-yellow-400 pulse"
           >
             ГАРАНТИЯ ВОЗВРАТА 30 ДНЕЙ! 💯
           </button>
