@@ -118,7 +118,7 @@ const ContactSection = () => {
                       onClick={() => {
                         window.open("/guarantee", "_blank");
                       }}
-                      className="w-full bg-graffiti-gold hover:bg-yellow-600 text-graffiti-black font-oswald font-bold animate-[wiggle_2s_ease-in-out_infinite]"
+                      className="w-full bg-graffiti-gold hover:bg-yellow-600 text-graffiti-black font-oswald font-bold"
                     >
                       🔒 Гарантия возврата
                     </Button>
