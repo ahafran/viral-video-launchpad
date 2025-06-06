@@ -33,49 +33,52 @@ const ContactSection = () => {
             <h3 className="text-2xl sm:text-3xl font-oswald font-bold mb-4 sm:mb-6 text-graffiti-black dark:text-white px-2">
               Заявка на сотрудничество
             </h3>
-            <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
-              <div className="grid gap-4 md:grid-cols-2">
+            <form
+              className="space-y-3 sm:space-y-4 lg:space-y-6"
+              onSubmit={handleSubmit}
+            >
+              <div className="grid gap-3 sm:gap-4 md:grid-cols-2">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
                     Имя *
                   </label>
                   <input
                     type="text"
                     required
-                    className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
+                    className="w-full px-3 sm:px-4 py-3 sm:py-3.5 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white min-h-[44px] touch-manipulation"
                     placeholder="Ваше имя"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
                     Телефон *
                   </label>
                   <input
                     type="tel"
                     required
-                    className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
+                    className="w-full px-3 sm:px-4 py-3 sm:py-3.5 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white min-h-[44px] touch-manipulation"
                     placeholder="+7 (999) 123-45-67"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
                   Email *
                 </label>
                 <input
                   type="email"
                   required
-                  className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-3 sm:px-4 py-3 sm:py-3.5 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white min-h-[44px] touch-manipulation"
                   placeholder="your@email.com"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
                   Тариф
                 </label>
-                <select className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white">
+                <select className="w-full px-3 sm:px-4 py-3 sm:py-3.5 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white min-h-[44px] touch-manipulation">
                   <option value="">Выберите тариф</option>
                   <option value="basic">Базовый (50 роликов/день)</option>
                   <option value="standard">
@@ -86,12 +89,12 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
                   Сообщение
                 </label>
                 <textarea
                   rows={4}
-                  className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-3 sm:px-4 py-3 sm:py-3.5 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white touch-manipulation resize-vertical"
                   placeholder="Расскажите о вашем проекте..."
                 ></textarea>
               </div>
@@ -99,7 +102,7 @@ const ContactSection = () => {
               <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <Button
                   type="submit"
-                  className="w-full bg-graffiti-red hover:bg-red-600 text-white font-oswald font-bold text-base sm:text-lg py-3 sm:py-4"
+                  className="w-full bg-graffiti-red hover:bg-red-600 text-white font-oswald font-bold text-base sm:text-lg py-3 sm:py-4 lg:py-4 min-h-[48px] touch-manipulation"
                   onClick={() => {
                     window.open("/guarantee", "_blank");
                   }}

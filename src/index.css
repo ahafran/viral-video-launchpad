@@ -3,6 +3,44 @@
 @tailwind utilities;
 
 @layer base {
+  /* Mobile-First базовые стили */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Улучшенная адаптивность для touch устройств */
+  @media (hover: none) and (pointer: coarse) {
+    .hover\:scale-105:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+@layer components {
+  /* Адаптивные utility классы */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  .street-shadow {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .graffiti-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
