@@ -50,37 +50,31 @@ const WorkflowSection = () => {
 
         <div className="grid gap-8 sm:gap-12 md:grid-cols-3 max-w-6xl mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className="text-center group relative">
-              {/* Step Number */}
-              <div
-                className={`inline-block text-4xl sm:text-6xl font-oswald font-bold text-${step.color} mb-4 sm:mb-6 animate-pulse-gold`}
-              >
-                {step.number}
-              </div>
-
-              {/* Icon */}
-              <div className="text-4xl sm:text-6xl mb-4 sm:mb-6 group-hover:animate-spray">
-                {step.icon}
-              </div>
-
-              {/* Title */}
-              <h3 className="text-xl sm:text-2xl font-oswald font-bold text-graffiti-black mb-3 sm:mb-4 group-hover:animate-glitch px-2">
-                {step.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-gray-600 font-roboto leading-relaxed text-sm sm:text-base px-2">
-                {step.description}
-              </p>
-
-              {/* Arrow (только на desktop) */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2">
-                  <div className="text-graffiti-gold text-3xl xl:text-4xl animate-pulse-gold">
-                    →
+            <div
+              key={index}
+              className={`relative p-6 sm:p-8 lg:p-10 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 transform hover:-translate-y-3 group border-t-4 ${
+                step.color === "graffiti-red"
+                  ? "border-graffiti-red dark:border-red-400"
+                  : "border-graffiti-gold dark:border-yellow-400"
+              } street-shadow`}
+            >
+              <div className="relative z-10">
+                <div className="flex items-center mb-4 sm:mb-6">
+                  <div className="text-5xl sm:text-6xl lg:text-7xl font-oswald font-bold text-gray-200 dark:text-gray-700 mr-4 transition-transform duration-300 group-hover:scale-110">
+                    {step.number}
+                  </div>
+                  <div className="text-3xl sm:text-4xl transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">
+                    {step.icon}
                   </div>
                 </div>
-              )}
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-oswald font-bold mb-3 sm:mb-4 text-graffiti-black dark:text-white group-hover:text-graffiti-red dark:group-hover:text-red-400 transition-colors duration-300">
+                  {step.title}
+                </h3>
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 font-roboto leading-relaxed group-hover:text-gray-800 dark:group-hover:text-gray-100 transition-colors duration-300">
+                  {step.description}
+                </p>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-graffiti-gold/10 to-graffiti-red/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
             </div>
           ))}
         </div>

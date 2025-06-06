@@ -87,25 +87,35 @@ const ContactSection = () => {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Сообщение
+                  Телефон *
                 </label>
-                <textarea
-                  rows={4}
-                  className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
-                  placeholder="Расскажите о вашем проекте..."
-                ></textarea>
+                <input
+                  type="tel"
+                  required
+                  className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-300 hover:border-graffiti-red focus:scale-105"
+                  placeholder="+7 (999) 123-45-67"
+                />
               </div>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Ваш проект
+              </label>
+              <textarea
+                rows={4}
+                className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-300 hover:border-graffiti-red focus:scale-105"
+                placeholder="Расскажите о своём проекте, целях и ожидаемых результатах..."
+              ></textarea>
+            </div>
+
+              <Button
+                type="submit"
+                className="w-full bg-graffiti-red hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-white font-oswald font-bold text-lg py-6 transition-all duration-300 hover:scale-105 hover:shadow-xl transform hover:-translate-y-1"
+              >
+                ОТПРАВИТЬ ЗАЯВКУ 🚀
+              </Button>
 
               <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                <Button
-                  type="submit"
-                  className="w-full bg-graffiti-red hover:bg-red-600 text-white font-oswald font-bold text-base sm:text-lg py-3 sm:py-4"
-                  onClick={() => {
-                    window.open("/guarantee", "_blank");
-                  }}
-                >
-                  ОТПРАВИТЬ ЗАЯВКУ
-                </Button>
                 <DialogContent className="max-w-md">
                   <div className="text-center p-6">
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
