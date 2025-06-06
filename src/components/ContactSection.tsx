@@ -48,93 +48,63 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Телефон *
+                    Email *
                   </label>
                   <input
-                    type="tel"
+                    type="email"
                     required
                     className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
-                    placeholder="+7 (999) 123-45-67"
+                    placeholder="your@email.com"
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  required
-                  className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Тариф
+                  Тип проекта
                 </label>
                 <select className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white">
-                  <option value="">Выберите тариф</option>
-                  <option value="basic">Базовый (50 роликов/день)</option>
-                  <option value="standard">
-                    Стандартный (200 роликов/день)
-                  </option>
-                  <option value="premium">Премиум (500 роликов/день)</option>
+                  <option>Граффити на стене</option>
+                  <option>Роспись фасада</option>
+                  <option>Художественное оформление</option>
+                  <option>Другое</option>
                 </select>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Телефон *
+                  Сообщение *
                 </label>
-                <input
-                  type="tel"
+                <textarea
                   required
-                  className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-300 hover:border-graffiti-red focus:scale-105"
-                  placeholder="+7 (999) 123-45-67"
+                  rows={4}
+                  className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
+                  placeholder="Расскажите о вашем проекте..."
                 />
               </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Ваш проект
-              </label>
-              <textarea
-                rows={4}
-                className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-300 hover:border-graffiti-red focus:scale-105"
-                placeholder="Расскажите о своём проекте, целях и ожидаемых результатах..."
-              ></textarea>
-            </div>
-
-              <Button
-                type="submit"
-                className="w-full bg-graffiti-red hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-white font-oswald font-bold text-lg py-6 transition-all duration-300 hover:scale-105 hover:shadow-xl transform hover:-translate-y-1"
-              >
-                ОТПРАВИТЬ ЗАЯВКУ 🚀
-              </Button>
 
               <Dialog open={isOpen} onOpenChange={setIsOpen}>
+                <DialogTrigger asChild>
+                  <Button
+                    type="submit"
+                    className="w-full bg-graffiti-red hover:bg-red-700 text-white font-oswald font-bold py-3 px-6 text-lg transition-colors"
+                  >
+                    ОТПРАВИТЬ ЗАЯВКУ
+                  </Button>
+                </DialogTrigger>
                 <DialogContent className="max-w-md">
-                  <div className="text-center p-6">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon name="Check" className="w-8 h-8 text-green-600" />
-                    </div>
-                    <h3 className="text-xl font-oswald font-bold mb-2">
+                  <div className="text-center py-6">
+                    <Icon
+                      name="CheckCircle"
+                      size={48}
+                      className="text-green-500 mx-auto mb-4"
+                    />
+                    <h3 className="text-xl font-bold mb-2">
                       Заявка отправлена!
                     </h3>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-600">
                       Мы свяжемся с вами в ближайшее время
                     </p>
-                    <Button
-                      onClick={() => {
-                        window.open("/guarantee", "_blank");
-                      }}
-                      className="w-full bg-graffiti-gold hover:bg-yellow-600 text-graffiti-black font-oswald font-bold"
-                    >
-                      🔒 Гарантия возврата
-                    </Button>
                   </div>
                 </DialogContent>
               </Dialog>
@@ -142,76 +112,53 @@ const ContactSection = () => {
           </Card>
 
           {/* Контактная информация */}
-          <div className="space-y-4 sm:space-y-6">
-            <Card className="p-4 sm:p-6 bg-graffiti-white dark:bg-gray-800">
-              <h3 className="text-lg sm:text-xl font-oswald font-bold mb-3 sm:mb-4 text-graffiti-black dark:text-white">
-                Связь
-              </h3>
-              <div className="space-y-2 sm:space-y-3">
-                <div className="flex items-center">
-                  <Icon
-                    name="Mail"
-                    className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
-                    size={16}
-                  />
-                  <span className="text-xs sm:text-sm break-all text-graffiti-black dark:text-gray-300">
-                    info@streetpromo.ru
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <Icon
-                    name="Phone"
-                    className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
-                    size={16}
-                  />
-                  <span className="text-xs sm:text-sm text-graffiti-black dark:text-gray-300">
-                    +7 (999) 123-45-67
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <Icon
-                    name="MessageCircle"
-                    className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
-                    size={16}
-                  />
-                  <span className="text-xs sm:text-sm text-graffiti-black dark:text-gray-300">
-                    @streetpromo_support
-                  </span>
-                </div>
+          <div className="space-y-6">
+            <Card className="p-6 bg-graffiti-white dark:bg-gray-800">
+              <div className="flex items-center mb-4">
+                <Icon
+                  name="MapPin"
+                  size={24}
+                  className="text-graffiti-red mr-3"
+                />
+                <h4 className="text-lg font-oswald font-bold text-graffiti-black dark:text-white">
+                  Адрес
+                </h4>
               </div>
+              <p className="text-gray-600 dark:text-gray-300">
+                г. Москва, ул. Граффити, д. 1
+              </p>
             </Card>
 
-            <Card className="p-4 sm:p-6 bg-graffiti-white dark:bg-gray-800">
-              <h3 className="text-lg sm:text-xl font-oswald font-bold mb-3 sm:mb-4 text-graffiti-black dark:text-white">
-                Офис
-              </h3>
-              <div className="space-y-2 sm:space-y-3">
-                <div className="flex items-start">
-                  <Icon
-                    name="MapPin"
-                    className="mr-2 sm:mr-3 text-graffiti-red mt-1 flex-shrink-0"
-                    size={16}
-                  />
-                  <div className="text-xs sm:text-sm">
-                    <p className="text-graffiti-black dark:text-gray-300">
-                      г. Москва, ул. Тверская, 1
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      БЦ "Центральный", офис 501
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <Icon
-                    name="Clock"
-                    className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
-                    size={16}
-                  />
-                  <span className="text-xs sm:text-sm text-graffiti-black dark:text-gray-300">
-                    Пн-Пт: 10:00 - 19:00
-                  </span>
-                </div>
+            <Card className="p-6 bg-graffiti-white dark:bg-gray-800">
+              <div className="flex items-center mb-4">
+                <Icon
+                  name="Phone"
+                  size={24}
+                  className="text-graffiti-red mr-3"
+                />
+                <h4 className="text-lg font-oswald font-bold text-graffiti-black dark:text-white">
+                  Телефон
+                </h4>
               </div>
+              <p className="text-gray-600 dark:text-gray-300">
+                +7 (999) 123-45-67
+              </p>
+            </Card>
+
+            <Card className="p-6 bg-graffiti-white dark:bg-gray-800">
+              <div className="flex items-center mb-4">
+                <Icon
+                  name="Mail"
+                  size={24}
+                  className="text-graffiti-red mr-3"
+                />
+                <h4 className="text-lg font-oswald font-bold text-graffiti-black dark:text-white">
+                  Email
+                </h4>
+              </div>
+              <p className="text-gray-600 dark:text-gray-300">
+                info@graffiti-studio.ru
+              </p>
             </Card>
           </div>
         </div>
