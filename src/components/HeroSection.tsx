@@ -10,16 +10,27 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black dark:from-gray-950 dark:via-black dark:to-gray-950">
-      {/* Graffiti Background Elements - адаптивные элементы */}
-      <div className="absolute inset-0 opacity-15 sm:opacity-20 dark:opacity-20 sm:dark:opacity-30">
-        <div className="absolute top-5 left-2 sm:top-10 sm:left-4 lg:top-20 lg:left-10 text-graffiti-gold dark:text-yellow-400 text-4xl sm:text-6xl lg:text-9xl font-oswald font-bold rotate-12 animate-pulse-gold">
+      {/* Graffiti Background Elements - улучшенное мобильное позиционирование */}
+      <div className="absolute inset-0 opacity-10 sm:opacity-15 md:opacity-20 dark:opacity-15 sm:dark:opacity-20 md:dark:opacity-30">
+        {/* Доллар - левый верхний угол */}
+        <div className="absolute top-4 left-4 sm:top-8 sm:left-6 md:top-12 md:left-8 lg:top-20 lg:left-10 text-graffiti-gold dark:text-yellow-400 text-2xl sm:text-4xl md:text-6xl lg:text-9xl font-oswald font-bold rotate-12 animate-pulse-gold">
           $
         </div>
-        <div className="absolute bottom-8 right-4 sm:bottom-16 sm:right-8 lg:bottom-32 lg:right-16 text-graffiti-red dark:text-red-400 text-3xl sm:text-5xl lg:text-7xl font-oswald font-bold -rotate-12 animate-spray">
+        {/* Пика - правый нижний угол */}
+        <div className="absolute bottom-4 right-4 sm:bottom-8 sm:right-6 md:bottom-12 md:right-8 lg:bottom-32 lg:right-16 text-graffiti-red dark:text-red-400 text-xl sm:text-3xl md:text-5xl lg:text-7xl font-oswald font-bold -rotate-12 animate-spray">
           ♠
         </div>
-        <div className="absolute top-1/2 left-1/4 text-graffiti-gold dark:text-yellow-400 text-2xl sm:text-3xl lg:text-5xl font-oswald font-bold rotate-45 opacity-50">
+        {/* Звездочка - центр слева */}
+        <div className="absolute top-1/3 left-2 sm:left-4 md:left-6 lg:left-1/4 text-graffiti-gold dark:text-yellow-400 text-lg sm:text-2xl md:text-3xl lg:text-5xl font-oswald font-bold rotate-45 opacity-50">
           ★
+        </div>
+        {/* Дополнительная звездочка - правый верх */}
+        <div className="absolute top-1/4 right-6 sm:right-8 md:right-12 lg:right-20 text-graffiti-red dark:text-red-400 text-base sm:text-xl md:text-2xl lg:text-4xl font-oswald font-bold -rotate-12 opacity-40">
+          ★
+        </div>
+        {/* Дополнительный доллар - левый низ */}
+        <div className="absolute bottom-1/3 left-6 sm:left-8 md:left-12 lg:left-20 text-graffiti-gold dark:text-yellow-400 text-sm sm:text-lg md:text-xl lg:text-3xl font-oswald font-bold rotate-45 opacity-30">
+          $
         </div>
       </div>
 
