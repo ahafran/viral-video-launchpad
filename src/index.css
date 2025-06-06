@@ -88,6 +88,11 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
   body {
     @apply bg-background text-foreground font-roboto;
   }
@@ -121,5 +126,36 @@
     bottom: -3px;
     border: 2px solid #ffd700;
     z-index: -1;
+  }
+
+  /* Медленный и плавный скролл */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y proximity;
+    }
+  }
+
+  /* Кастомные стили для скролла */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ff0040 #1a1a1a;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff0040, #ffd700);
+    border-radius: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ffd700, #ff0040);
   }
 }
