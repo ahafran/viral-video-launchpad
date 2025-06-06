@@ -1,15 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
 const PlanPremium = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black py-20">
@@ -21,7 +16,7 @@ const PlanPremium = () => {
               document
                 .getElementById("pricing")
                 ?.scrollIntoView({ behavior: "smooth" });
-            }, 300);
+            }, 100);
           }}
           className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
         >
@@ -103,7 +98,7 @@ const PlanPremium = () => {
                 setTimeout(() => {
                   const contactSection = document.getElementById("contacts");
                   contactSection?.scrollIntoView({ behavior: "smooth" });
-                }, 300);
+                }, 100);
               }}
               className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-xl py-6"
             >
