@@ -21,7 +21,7 @@ const PlanBasic = () => {
               document
                 .getElementById("pricing")
                 ?.scrollIntoView({ behavior: "smooth" });
-            }, 100);
+            }, 300);
           }}
           className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
         >
@@ -98,7 +98,7 @@ const PlanBasic = () => {
                 setTimeout(() => {
                   const contactSection = document.getElementById("contacts");
                   contactSection?.scrollIntoView({ behavior: "smooth" });
-                }, 100);
+                }, 300);
               }}
               className="w-full bg-graffiti-black hover:bg-gray-800 text-graffiti-white font-oswald font-bold text-xl py-6"
             >

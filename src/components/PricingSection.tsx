@@ -54,7 +54,10 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-20 bg-gray-50 dark:bg-gray-900">
+    <section
+      id="pricing"
+      className="py-20 bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black"
+    >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl font-oswald font-bold text-graffiti-black dark:text-white mb-3 sm:mb-4 px-2">
