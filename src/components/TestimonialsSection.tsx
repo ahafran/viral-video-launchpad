@@ -55,35 +55,42 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 transform hover:-translate-y-2 group street-shadow"
+              className="bg-graffiti-white p-6 sm:p-8 transform hover:scale-105 transition-all duration-300 street-shadow group"
             >
-              <div className="flex items-center mb-4 sm:mb-6">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-graffiti-red dark:bg-red-600 rounded-full flex items-center justify-center text-2xl sm:text-3xl text-white mr-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
-                  {testimonial.avatar}
-                </div>
-                <div>
-                  <h4 className="font-oswald font-bold text-lg sm:text-xl text-graffiti-black dark:text-white group-hover:text-graffiti-red dark:group-hover:text-red-400 transition-colors duration-300">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors duration-300">
-                    {testimonial.role}
-                  </p>
-                </div>
+              {/* Quote Icon */}
+              <div className="text-graffiti-red text-3xl sm:text-4xl font-oswald font-bold mb-3 sm:mb-4 group-hover:animate-spray">
+                "
               </div>
-              <div className="flex mb-4 transition-transform duration-300 group-hover:scale-110">
+
+              {/* Content */}
+              <p className="text-gray-800 font-roboto text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+                {testimonial.content}
+              </p>
+
+              {/* Rating */}
+              <div className="flex justify-center mb-3 sm:mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <span
                     key={i}
-                    className="text-graffiti-gold dark:text-yellow-400 text-xl"
+                    className="text-graffiti-gold text-xl sm:text-2xl"
                   >
                     ⭐
                   </span>
                 ))}
               </div>
-              <p className="text-gray-700 dark:text-gray-300 font-roboto italic leading-relaxed group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors duration-300">
-                "{testimonial.content}"
-              </p>
-              <div className="absolute inset-0 bg-gradient-to-t from-graffiti-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+
+              {/* Author */}
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">
+                  {testimonial.avatar}
+                </div>
+                <div className="font-oswald font-bold text-graffiti-black text-lg sm:text-xl">
+                  {testimonial.name}
+                </div>
+                <div className="text-graffiti-red font-roboto text-sm sm:text-base">
+                  {testimonial.role}
+                </div>
+              </div>
             </div>
           ))}
         </div>

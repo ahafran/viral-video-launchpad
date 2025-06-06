@@ -65,61 +65,84 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto">
-          {plans.map((plan, index) => {
-            const popular = plan.popular;
-            return (
-              <div
-                key={index}
-                className={`relative p-8 rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col ${
-                  popular && "ring-4 ring-graffiti-gold dark:ring-yellow-400"
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-3 max-w-6xl mx-auto">
+          {plans.map((plan, index) => (
+            <Card
+              key={index}
+              className={`relative p-6 sm:p-8 transition-all duration-300 hover:scale-105 ${
+                plan.popular
+                  ? "border-graffiti-red dark:border-red-400 shadow-2xl bg-white dark:bg-gray-800"
+                  : "bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700"
+              }`}
+            >
+              {/* Popular Badge */}
+              {plan.popular && (
+                <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-graffiti-red text-graffiti-white px-4 sm:px-6 py-1 sm:py-2 font-oswald font-bold text-xs sm:text-sm transform -rotate-2">
+                    ПОПУЛЯРНЫЙ! ⭐
+                  </div>
+                </div>
+              )}
+
+              {/* Plan Name */}
+              <div className={`text-center mb-4 sm:mb-6`}>
+                <h3
+                  className={`text-2xl sm:text-3xl font-oswald font-bold text-${plan.color} mb-2 px-2`}
+                >
+                  {plan.name}
+                </h3>
+                <p className="text-gray-600 font-roboto text-sm sm:text-base px-2">
+                  {plan.description}
+                </p>
+              </div>
+
+              {/* Price */}
+              <div className="text-center mb-6 sm:mb-8">
+                <div
+                  className={`text-3xl sm:text-5xl font-oswald font-bold text-${plan.color} mb-2`}
+                >
+                  {plan.price}
+                  <span className="text-sm sm:text-lg text-gray-500">
+                    {plan.period}
+                  </span>
+                </div>
+              </div>
+
+              {/* Features */}
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                {plan.features.map((feature, featureIndex) => (
+                  <li
+                    key={featureIndex}
+                    className="flex items-start font-roboto text-sm sm:text-base px-2"
+                  >
+                    <span className="text-graffiti-gold mr-2 sm:mr-3 text-lg sm:text-xl flex-shrink-0">
+                      ✓
+                    </span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              {/* CTA Button */}
+              <Button
+                onClick={() => {
+                  const routes = [
+                    "/plan-basic",
+                    "/plan-standard",
+                    "/plan-premium",
+                  ];
+                  navigate(routes[index]);
+                }}
+                className={`w-full font-oswald font-bold text-base sm:text-lg py-4 sm:py-6 ${
+                  plan.popular
+                    ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
+                    : `bg-${plan.color} hover:opacity-90 text-graffiti-white`
                 }`}
               >
-                {popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-graffiti-gold dark:bg-yellow-400 text-graffiti-black dark:text-black px-4 py-1 rounded-full text-sm font-bold animate-bounce">
-                    ПОПУЛЯРНЫЙ
-                  </div>
-                )}
-                <div className="text-center space-y-4 mb-6">
-                  <h3 className="text-2xl sm:text-3xl font-oswald font-bold text-graffiti-black dark:text-white">
-                    {plan.name}
-                  </h3>
-                  <div className="text-3xl sm:text-4xl font-bold text-graffiti-red dark:text-red-400">
-                    {plan.price}
-                    <span className="text-lg text-gray-600 dark:text-gray-400">
-                      {plan.period}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 font-medium">
-                    {plan.description}
-                  </p>
-                </div>
-                <ul className="space-y-3 mb-8 flex-grow">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-start gap-3 text-gray-700 dark:text-gray-300 transition-all duration-300 hover:translate-x-2"
-                    >
-                      <span className="text-graffiti-red dark:text-red-400 font-bold text-xl">
-                        ✓
-                      </span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Button
-                  className={`w-full font-oswald font-bold text-lg py-6 transition-all duration-300 hover:scale-105 hover:shadow-xl transform hover:-translate-y-1 ${
-                    popular
-                      ? "bg-graffiti-red hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-white"
-                      : "bg-graffiti-black hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white"
-                  }`}
-                  onClick={() => navigate("/calculator")}
-                >
-                  ВЫБРАТЬ ПЛАН
-                </Button>
-              </div>
-            );
-          })}
+                ВЫБРАТЬ ПЛАН 🚀
+              </Button>
+            </Card>
+          ))}
         </div>
 
         {/* Money Back Guarantee */}

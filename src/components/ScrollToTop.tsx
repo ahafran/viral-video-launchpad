@@ -29,14 +29,10 @@ const ScrollToTop = () => {
     <Button
       onClick={scrollToTop}
       size="icon"
-      className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 w-12 h-12 sm:w-auto sm:h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 transform hover:-translate-y-1 bg-graffiti-red hover:bg-red-600 text-white animate-bounce hover:animate-none"
+      className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 w-12 h-12 sm:w-auto sm:h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
       aria-label="Прокрутить вверх"
     >
-      <Icon
-        name="ArrowUp"
-        size={18}
-        className="sm:w-5 sm:h-5 transition-transform duration-300 hover:scale-125"
-      />
+      <Icon name="ArrowUp" size={18} className="sm:w-5 sm:h-5" />
     </Button>
   );
 };

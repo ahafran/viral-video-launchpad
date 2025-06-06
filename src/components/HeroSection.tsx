@@ -47,17 +47,18 @@ const HeroSection = () => {
           <div className="flex flex-col gap-4 sm:flex-row sm:gap-6 justify-center items-center px-4">
             <Button
               size="lg"
-              className="w-full sm:w-auto bg-graffiti-red hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-graffiti-white dark:text-white font-oswald font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 street-shadow animate-pulse-gold transition-all duration-300 hover:scale-105 hover:shadow-2xl transform hover:-translate-y-1"
+              className="w-full sm:w-auto bg-graffiti-red hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-graffiti-white dark:text-white font-oswald font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 street-shadow animate-pulse-gold"
               onClick={scrollToContact}
             >
-              НАЧАТЬ СЕЙЧАС 🔥
+              ПОПРОБОВАТЬ БЕСПЛАТНО 🚀
             </Button>
             <Button
-              size="lg"
               variant="outline"
-              className="w-full sm:w-auto border-2 border-graffiti-white dark:border-white text-graffiti-white dark:text-white hover:bg-graffiti-white hover:text-graffiti-black dark:hover:bg-white dark:hover:text-black font-oswald font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 transition-all duration-300 hover:scale-105 hover:shadow-xl transform hover:-translate-y-1"
+              size="lg"
+              className="w-full sm:w-auto border-graffiti-gold text-graffiti-gold hover:bg-graffiti-gold hover:text-graffiti-black font-oswald font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6"
+              onClick={scrollToContact}
             >
-              УЗНАТЬ БОЛЬШЕ
+              СВЯЗАТЬСЯ С НАМИ
             </Button>
           </div>
 

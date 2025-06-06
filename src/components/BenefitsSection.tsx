@@ -69,24 +69,29 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className={`relative p-6 sm:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 transform hover:-translate-y-2 group border-l-4 ${
-                benefit.color === "graffiti-red"
-                  ? "border-graffiti-red dark:border-red-400"
-                  : "border-graffiti-gold dark:border-yellow-400"
-              } street-shadow`}
+              className="group text-center p-6 sm:p-8 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer"
             >
-              <div className="text-center">
-                <div className="text-4xl sm:text-5xl mb-4 transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl sm:text-2xl font-oswald font-bold mb-3 sm:mb-4 text-graffiti-black dark:text-white group-hover:text-graffiti-red dark:group-hover:text-red-400 transition-colors duration-300">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 font-roboto leading-relaxed group-hover:text-gray-800 dark:group-hover:text-gray-100 transition-colors duration-300">
-                  {benefit.description}
-                </p>
+              {/* Icon */}
+              <div className="text-4xl sm:text-6xl mb-4 sm:mb-6 group-hover:animate-spray">
+                {benefit.icon}
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-graffiti-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+
+              {/* Title */}
+              <h3
+                className={`text-lg sm:text-2xl font-oswald font-bold text-${benefit.color} mb-3 sm:mb-4 group-hover:animate-glitch px-2`}
+              >
+                {benefit.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-gray-600 font-roboto leading-relaxed text-sm sm:text-base px-2">
+                {benefit.description}
+              </p>
+
+              {/* Decorative Line */}
+              <div
+                className={`w-12 sm:w-16 h-1 bg-${benefit.color} mx-auto mt-4 sm:mt-6 group-hover:w-20 sm:group-hover:w-24 transition-all duration-300`}
+              ></div>
             </div>
           ))}
         </div>
