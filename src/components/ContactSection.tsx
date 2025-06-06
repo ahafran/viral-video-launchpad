@@ -1,210 +1,33 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import Icon from "@/components/ui/icon";
-import { useState } from "react";
 
 const ContactSection = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsOpen(true);
-  };
-
   return (
     <section
       id="contacts"
-      className="py-12 sm:py-20 bg-graffiti-black dark:bg-gray-950"
+      className="py-20 bg-gray-900 dark:bg-black text-white"
     >
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl font-oswald font-bold text-graffiti-white dark:text-white mb-3 sm:mb-4 px-2">
-            СВЯЗАТЬСЯ С НАМИ
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-300 dark:text-gray-400 max-w-2xl mx-auto px-2">
-            Готовы начать? Свяжитесь с нами для обсуждения вашего проекта
-          </p>
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-4xl font-bold mb-8">
+          Готовы автоматизировать постинг?
+        </h2>
+        <p className="text-xl mb-8 text-gray-300">
+          Начните бесплатную пробную версию на 7 дней
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="Ваш email"
+            className="flex-1 px-4 py-3 rounded-lg text-gray-900 w-full sm:w-auto"
+          />
+          <Button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 w-full sm:w-auto">
+            Попробовать бесплатно
+          </Button>
         </div>
 
-        <div className="max-w-6xl mx-auto grid gap-6 sm:gap-8 lg:grid-cols-3">
-          {/* Форма заявки */}
-          <Card className="lg:col-span-2 p-6 sm:p-8 bg-graffiti-white dark:bg-gray-800">
-            <h3 className="text-2xl sm:text-3xl font-oswald font-bold mb-4 sm:mb-6 text-graffiti-black dark:text-white px-2">
-              Заявка на сотрудничество
-            </h3>
-            <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
-              <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Имя *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
-                    placeholder="Ваше имя"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Телефон *
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
-                    placeholder="+7 (999) 123-45-67"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  required
-                  className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Тариф
-                </label>
-                <select className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white">
-                  <option value="">Выберите тариф</option>
-                  <option value="basic">Базовый (50 роликов/день)</option>
-                  <option value="standard">
-                    Стандартный (200 роликов/день)
-                  </option>
-                  <option value="premium">Премиум (500 роликов/день)</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Сообщение
-                </label>
-                <textarea
-                  rows={4}
-                  className="w-full px-3 sm:px-4 py-3 text-sm sm:text-base border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-graffiti-red focus:border-transparent dark:bg-gray-700 dark:text-white"
-                  placeholder="Расскажите о вашем проекте..."
-                ></textarea>
-              </div>
-
-              <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                <Button
-                  type="submit"
-                  className="w-full bg-graffiti-red hover:bg-red-600 text-white font-oswald font-bold text-base sm:text-lg py-3 sm:py-4"
-                  onClick={() => {
-                    window.open("/guarantee", "_blank");
-                  }}
-                >
-                  ОТПРАВИТЬ ЗАЯВКУ
-                </Button>
-                <DialogContent className="max-w-md">
-                  <div className="text-center p-6">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon name="Check" className="w-8 h-8 text-green-600" />
-                    </div>
-                    <h3 className="text-xl font-oswald font-bold mb-2">
-                      Заявка отправлена!
-                    </h3>
-                    <p className="text-gray-600 mb-6">
-                      Мы свяжемся с вами в ближайшее время
-                    </p>
-                    <Button
-                      onClick={() => {
-                        window.open("/guarantee", "_blank");
-                      }}
-                      className="w-full bg-graffiti-gold hover:bg-yellow-600 text-graffiti-black font-oswald font-bold"
-                    >
-                      🔒 Гарантия возврата
-                    </Button>
-                  </div>
-                </DialogContent>
-              </Dialog>
-            </form>
-          </Card>
-
-          {/* Контактная информация */}
-          <div className="space-y-4 sm:space-y-6">
-            <Card className="p-4 sm:p-6 bg-graffiti-white dark:bg-gray-800">
-              <h3 className="text-lg sm:text-xl font-oswald font-bold mb-3 sm:mb-4 text-graffiti-black dark:text-white">
-                Связь
-              </h3>
-              <div className="space-y-2 sm:space-y-3">
-                <div className="flex items-center">
-                  <Icon
-                    name="Mail"
-                    className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
-                    size={16}
-                  />
-                  <span className="text-xs sm:text-sm break-all text-graffiti-black dark:text-gray-300">
-                    info@streetpromo.ru
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <Icon
-                    name="Phone"
-                    className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
-                    size={16}
-                  />
-                  <span className="text-xs sm:text-sm text-graffiti-black dark:text-gray-300">
-                    +7 (999) 123-45-67
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <Icon
-                    name="MessageCircle"
-                    className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
-                    size={16}
-                  />
-                  <span className="text-xs sm:text-sm text-graffiti-black dark:text-gray-300">
-                    @streetpromo_support
-                  </span>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-4 sm:p-6 bg-graffiti-white dark:bg-gray-800">
-              <h3 className="text-lg sm:text-xl font-oswald font-bold mb-3 sm:mb-4 text-graffiti-black dark:text-white">
-                Офис
-              </h3>
-              <div className="space-y-2 sm:space-y-3">
-                <div className="flex items-start">
-                  <Icon
-                    name="MapPin"
-                    className="mr-2 sm:mr-3 text-graffiti-red mt-1 flex-shrink-0"
-                    size={16}
-                  />
-                  <div className="text-xs sm:text-sm">
-                    <p className="text-graffiti-black dark:text-gray-300">
-                      г. Москва, ул. Тверская, 1
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      БЦ "Центральный", офис 501
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <Icon
-                    name="Clock"
-                    className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
-                    size={16}
-                  />
-                  <span className="text-xs sm:text-sm text-graffiti-black dark:text-gray-300">
-                    Пн-Пт: 10:00 - 19:00
-                  </span>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
+        <p className="mt-4 text-sm text-gray-400">
+          Без обязательств. Отменить можно в любой момент.
+        </p>
       </div>
     </section>
   );

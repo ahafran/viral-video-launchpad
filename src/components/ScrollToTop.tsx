@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import Icon from "@/components/ui/icon";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,8 +18,10 @@ const ScrollToTop = () => {
   }, []);
 
   const scrollToTop = () => {
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   if (!isVisible) return null;
@@ -28,11 +29,9 @@ const ScrollToTop = () => {
   return (
     <Button
       onClick={scrollToTop}
-      size="icon"
-      className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 w-12 h-12 sm:w-auto sm:h-auto shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 bg-primary text-primary-foreground border-2 border-background/20 hover:bg-primary/90"
-      aria-label="Прокрутить вверх"
+      className="fixed bottom-8 right-8 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg"
     >
-      <Icon name="ArrowUp" size={18} className="sm:w-5 sm:h-5" />
+      ↑
     </Button>
   );
 };
