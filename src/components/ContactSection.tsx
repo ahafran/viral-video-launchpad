@@ -97,24 +97,31 @@ const ContactSection = () => {
                 <Button
                   type="submit"
                   className="w-full bg-graffiti-red hover:bg-red-600 text-white font-oswald font-bold text-lg py-4"
+                  onClick={() => {
+                    window.open("/guarantee", "_blank");
+                  }}
                 >
-                  <Icon name="Send" className="mr-2" />
                   ОТПРАВИТЬ ЗАЯВКУ
                 </Button>
-                <DialogContent className="bg-graffiti-white max-w-md">
-                  <div className="text-center py-6">
-                    <Icon
-                      name="CheckCircle"
-                      className="mx-auto mb-4 text-green-500"
-                      size={48}
-                    />
+                <DialogContent className="max-w-md">
+                  <div className="text-center p-6">
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon name="Check" className="w-8 h-8 text-green-600" />
+                    </div>
                     <h3 className="text-xl font-oswald font-bold mb-2">
-                      Спасибо!
+                      Заявка отправлена!
                     </h3>
-                    <p className="text-gray-600">
-                      Благодарим за обращение! В ближайшее время мы с вами
-                      свяжемся.
+                    <p className="text-gray-600 mb-6">
+                      Мы свяжемся с вами в ближайшее время
                     </p>
+                    <Button
+                      onClick={() => {
+                        window.open("/guarantee", "_blank");
+                      }}
+                      className="w-full bg-graffiti-gold hover:bg-yellow-600 text-graffiti-black font-oswald font-bold"
+                    >
+                      🔒 Гарантия возврата
+                    </Button>
                   </div>
                 </DialogContent>
               </Dialog>

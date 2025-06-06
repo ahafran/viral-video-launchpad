@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 const Guarantee = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-graffiti-white">
       {/* Header */}
