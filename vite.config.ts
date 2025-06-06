@@ -69,6 +69,28 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
+  // Оптимизация CSS
+  css: {
+    postcss: {
+      plugins: [
+        require("autoprefixer"),
+        // Удаляем неиспользуемые CSS в продакшене
+        mode === "production" &&
+          require("@fullhuman/postcss-purgecss")({
+            content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
+            defaultExtractor: (content) =>
+              content.match(/[\w-/:]+(?<!:)/g) || [],
+            safelist: [
+              /^animate-/,
+              /^graffiti-/,
+              /^dark:/,
+              /^hover:/,
+              /^focus:/,
+            ],
+          }),
+      ].filter(Boolean),
+    },
+  },
   // Оптимизация зависимостей
   optimizeDeps: {
     include: ["react", "react-dom", "react-router-dom", "lucide-react"],
