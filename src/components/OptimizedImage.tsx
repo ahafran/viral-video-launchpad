@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   createOptimizedImage,
   createImageObserver,
+  createPlaceholder,
+  RESPONSIVE_SIZES,
 } from "@/utils/imageOptimization";
 
 interface OptimizedImageProps {
@@ -11,6 +13,7 @@ interface OptimizedImageProps {
   sizes?: string;
   priority?: boolean;
   placeholder?: string;
+  imageType?: keyof typeof RESPONSIVE_SIZES;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -21,13 +24,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = "",
   sizes,
   priority = false,
-  placeholder = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjwvc3ZnPg==",
+  placeholder,
+  imageType = "card",
   onLoad,
   onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  // Создаем оптимизированный placeholder
+  const defaultPlaceholder = placeholder || createPlaceholder();
 
   useEffect(() => {
     if (priority) return;
@@ -35,8 +43,13 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     const observer = createImageObserver((entry) => {
       if (entry.isIntersecting) {
         setIsInView(true);
+        observer?.disconnect();
       }
     });
+
+    if (imgRef.current && observer) {
+      observer.observe(imgRef.current);
+    }
 
     return () => observer?.disconnect();
   }, [priority]);
@@ -51,49 +64,53 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     onError?.();
   };
 
-  const imageProps = createOptimizedImage(src, alt, className, sizes);
-
-  // Показываем placeholder если изображение не в поле зрения или не загружено
-  if (!isInView || hasError) {
-    return (
-      <div
-        className={`bg-gray-200 animate-pulse ${className}`}
-        style={{ aspectRatio: "16/9" }}
-        aria-label={alt}
-      >
-        {hasError && (
-          <div className="flex items-center justify-center h-full text-gray-500">
-            Изображение недоступно
-          </div>
-        )}
-      </div>
-    );
-  }
+  // Получаем оптимизированные параметры изображения
+  const optimizedProps = createOptimizedImage(
+    src,
+    alt,
+    className,
+    sizes,
+    imageType,
+  );
 
   return (
-    <div className="relative">
-      {/* Placeholder пока изображение загружается */}
-      {!isLoaded && (
+    <div className="relative overflow-hidden">
+      {/* Placeholder - показываем пока изображение не загрузилось */}
+      {!isLoaded && !hasError && (
         <img
-          src={placeholder}
+          src={defaultPlaceholder}
           alt=""
-          className={`absolute inset-0 ${className}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${className}`}
           aria-hidden="true"
         />
       )}
 
       {/* Основное изображение */}
-      <img
-        {...imageProps}
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`transition-opacity duration-300 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        } ${className}`}
-        style={{
-          ...(priority ? {} : { loading: "lazy" }),
-        }}
-      />
+      {(isInView || priority) && (
+        <img
+          ref={imgRef}
+          {...optimizedProps}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            isLoaded ? "opacity-100" : "opacity-0"
+          } ${className}`}
+          onLoad={handleLoad}
+          onError={handleError}
+          style={{
+            filter: isLoaded ? "none" : "blur(5px)",
+            transform: isLoaded ? "scale(1)" : "scale(1.1)",
+            transition: "all 0.3s ease",
+          }}
+        />
+      )}
+
+      {/* Ошибка загрузки */}
+      {hasError && (
+        <div
+          className={`flex items-center justify-center bg-gray-100 ${className}`}
+        >
+          <span className="text-gray-400 text-sm">Ошибка загрузки</span>
+        </div>
+      )}
     </div>
   );
 };
