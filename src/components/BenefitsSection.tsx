@@ -41,56 +41,56 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-20 bg-graffiti-white relative overflow-hidden">
-      {/* Background Graffiti - скрыты на мобильных */}
-      <div className="absolute inset-0 opacity-5 hidden lg:block">
-        <div className="absolute top-10 left-10 text-graffiti-black text-6xl xl:text-9xl font-oswald font-bold rotate-45">
+    <section className="py-20 bg-graffiti-white relative overflow-hidden">
+      {/* Background Graffiti */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-10 left-10 text-graffiti-black text-9xl font-oswald font-bold rotate-45">
           ★
         </div>
-        <div className="absolute bottom-20 right-20 text-graffiti-red text-6xl xl:text-8xl font-oswald font-bold -rotate-12">
+        <div className="absolute bottom-20 right-20 text-graffiti-red text-8xl font-oswald font-bold -rotate-12">
           ♣
         </div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-graffiti-gold text-4xl xl:text-6xl font-oswald font-bold">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-graffiti-gold text-6xl font-oswald font-bold">
           #1
         </div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-oswald font-bold text-graffiti-black mb-4 sm:mb-6 graffiti-text px-2">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-oswald font-bold text-graffiti-black mb-6 graffiti-text">
             ПОЧЕМУ МЫ
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto font-roboto px-2">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto font-roboto">
             Преимущества, которые делают нас лидерами в индустрии
           </p>
         </div>
 
-        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group text-center p-6 sm:p-8 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer"
+              className="group text-center p-8 hover:transform hover:scale-105 transition-all duration-300 cursor-pointer"
             >
               {/* Icon */}
-              <div className="text-4xl sm:text-6xl mb-4 sm:mb-6 group-hover:animate-spray">
+              <div className="text-6xl mb-6 group-hover:animate-spray">
                 {benefit.icon}
               </div>
 
               {/* Title */}
               <h3
-                className={`text-lg sm:text-2xl font-oswald font-bold text-${benefit.color} mb-3 sm:mb-4 group-hover:animate-glitch px-2`}
+                className={`text-2xl font-oswald font-bold text-${benefit.color} mb-4 group-hover:animate-glitch`}
               >
                 {benefit.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 font-roboto leading-relaxed text-sm sm:text-base px-2">
+              <p className="text-gray-600 font-roboto leading-relaxed">
                 {benefit.description}
               </p>
 
               {/* Decorative Line */}
               <div
-                className={`w-12 sm:w-16 h-1 bg-${benefit.color} mx-auto mt-4 sm:mt-6 group-hover:w-20 sm:group-hover:w-24 transition-all duration-300`}
+                className={`w-16 h-1 bg-${benefit.color} mx-auto mt-6 group-hover:w-24 transition-all duration-300`}
               ></div>
             </div>
           ))}

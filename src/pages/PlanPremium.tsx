@@ -1,15 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
 const PlanPremium = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black py-20">
@@ -21,7 +16,7 @@ const PlanPremium = () => {
               document
                 .getElementById("pricing")
                 ?.scrollIntoView({ behavior: "smooth" });
-            }, 300);
+            }, 100);
           }}
           className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
         >
@@ -29,24 +24,22 @@ const PlanPremium = () => {
           Назад к тарифам
         </Button>
 
-        <Card className="max-w-2xl mx-auto p-12 bg-graffiti-white dark:bg-gray-800">
+        <Card className="max-w-2xl mx-auto p-12 bg-graffiti-white">
           <div className="text-center">
             <h1 className="text-5xl font-oswald font-bold text-graffiti-gold mb-4">
               ПРЕМИУМ ПЛАН
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              500 роликов в день
-            </p>
+            <p className="text-xl text-gray-600 mb-8">500 роликов в день</p>
 
             <div className="text-6xl font-oswald font-bold text-graffiti-gold mb-2 whitespace-nowrap">
               1 134 000<span className="text-xl text-gray-500"> ₽/месяц</span>
             </div>
-            <div className="text-lg text-gray-500 dark:text-gray-400 mb-8">
+            <div className="text-lg text-gray-500 mb-8">
               Или 10 900 000 ₽/год (скидка 20%)
             </div>
 
             <div className="text-left mb-8">
-              <h3 className="text-2xl font-oswald font-bold mb-4 text-graffiti-black dark:text-white">
+              <h3 className="text-2xl font-oswald font-bold mb-4">
                 Что входит:
               </h3>
               <ul className="space-y-3">
@@ -88,10 +81,10 @@ const PlanPremium = () => {
                 </li>
               </ul>
 
-              <h3 className="text-xl font-oswald font-bold mt-6 mb-2 text-graffiti-black dark:text-white">
+              <h3 className="text-xl font-oswald font-bold mt-6 mb-2">
                 Для кого:
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600">
                 Для топовых звёзд, крупных брендов и агентств, которым важно
                 доминировать в медиа пространстве и быстро наращивать охваты.
               </p>
