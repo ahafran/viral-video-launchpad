@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}"
+  ],
   prefix: "",
   theme: {
     container: {
@@ -129,37 +134,18 @@ export default {
             transform: "scale(1) rotate(0deg)",
           },
         },
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        slideUp: {
-          "0%": { transform: "translateY(20px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
       },
-      // Оптимизированные анимации
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "pulse-gold": "pulse-gold 2s ease-in-out infinite",
         glitch: "glitch 0.5s ease-in-out infinite",
         spray: "spray 3s ease-in-out infinite",
-        "fade-in": "fadeIn 0.3s ease-out",
-        "slide-up": "slideUp 0.3s ease-out",
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
       },
-    },
-  },
-  // Удаление неиспользуемых стилей
-  purge: {
-    enabled: process.env.NODE_ENV === "production",
-    content: ["./src/**/*.{js,jsx,ts,tsx}"],
-    options: {
-      safelist: ["animate-fade-in", "animate-slide-up"],
     },
   },
   plugins: [require("tailwindcss-animate")],
