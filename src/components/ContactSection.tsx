@@ -133,8 +133,8 @@ const ContactSection = () => {
 
           {/* Контактная информация */}
           <div className="space-y-4 sm:space-y-6">
-            <Card className="p-4 sm:p-6 bg-graffiti-white">
-              <h3 className="text-lg sm:text-xl font-oswald font-bold mb-3 sm:mb-4">
+            <Card className="p-4 sm:p-6 bg-graffiti-white dark:bg-gray-800">
+              <h3 className="text-lg sm:text-xl font-oswald font-bold mb-3 sm:mb-4 text-graffiti-black dark:text-white">
                 Связь
               </h3>
               <div className="space-y-2 sm:space-y-3">
@@ -144,7 +144,7 @@ const ContactSection = () => {
                     className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
                     size={16}
                   />
-                  <span className="text-xs sm:text-sm break-all">
+                  <span className="text-xs sm:text-sm break-all text-graffiti-black dark:text-gray-300">
                     info@streetpromo.ru
                   </span>
                 </div>
@@ -154,7 +154,9 @@ const ContactSection = () => {
                     className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
                     size={16}
                   />
-                  <span className="text-xs sm:text-sm">+7 (999) 123-45-67</span>
+                  <span className="text-xs sm:text-sm text-graffiti-black dark:text-gray-300">
+                    +7 (999) 123-45-67
+                  </span>
                 </div>
                 <div className="flex items-center">
                   <Icon
@@ -162,15 +164,15 @@ const ContactSection = () => {
                     className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
                     size={16}
                   />
-                  <span className="text-xs sm:text-sm">
+                  <span className="text-xs sm:text-sm text-graffiti-black dark:text-gray-300">
                     @streetpromo_support
                   </span>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-4 sm:p-6 bg-graffiti-white">
-              <h3 className="text-lg sm:text-xl font-oswald font-bold mb-3 sm:mb-4">
+            <Card className="p-4 sm:p-6 bg-graffiti-white dark:bg-gray-800">
+              <h3 className="text-lg sm:text-xl font-oswald font-bold mb-3 sm:mb-4 text-graffiti-black dark:text-white">
                 Офис
               </h3>
               <div className="space-y-2 sm:space-y-3">
@@ -181,8 +183,12 @@ const ContactSection = () => {
                     size={16}
                   />
                   <div className="text-xs sm:text-sm">
-                    <p>г. Москва, ул. Тверская, 1</p>
-                    <p className="text-gray-600">БЦ "Центральный", офис 501</p>
+                    <p className="text-graffiti-black dark:text-gray-300">
+                      г. Москва, ул. Тверская, 1
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      БЦ "Центральный", офис 501
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -191,7 +197,7 @@ const ContactSection = () => {
                     className="mr-2 sm:mr-3 text-graffiti-red flex-shrink-0"
                     size={16}
                   />
-                  <span className="text-xs sm:text-sm">
+                  <span className="text-xs sm:text-sm text-graffiti-black dark:text-gray-300">
                     Пн-Пт: 10:00 - 19:00
                   </span>
                 </div>
