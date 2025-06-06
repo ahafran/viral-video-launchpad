@@ -6,11 +6,24 @@ const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    if (theme === "light") {
+      setTheme("dark");
+    } else if (theme === "dark") {
+      setTheme("system");
+    } else {
+      setTheme("light");
+    }
   };
 
   const getIcon = () => {
-    return theme === "light" ? "Sun" : "Moon";
+    switch (theme) {
+      case "light":
+        return "Sun";
+      case "dark":
+        return "Moon";
+      default:
+        return "Monitor";
+    }
   };
 
   return (
