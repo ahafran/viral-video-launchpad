@@ -99,54 +99,11 @@ const Guarantee = () => {
                 </p>
                 <button
                   onClick={() => {
-                    document.getElementById("cooperation")?.scrollIntoView({
-                      behavior: "smooth",
-                    });
+                    window.location.href = "/#contacts";
                   }}
                   className="bg-graffiti-red text-graffiti-white px-8 py-3 font-oswald font-bold hover:scale-105 transition-transform"
                 >
                   СВЯЗАТЬСЯ СЕЙЧАС
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Cooperation Section */}
-      <div id="cooperation" className="bg-graffiti-black py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-oswald font-bold text-graffiti-gold mb-8">
-              🤝 Сотрудничество с нами
-            </h2>
-            <p className="text-xl text-graffiti-white font-roboto mb-12 max-w-3xl mx-auto">
-              Готовы начать работу с гарантией качества? Свяжитесь с нами любым
-              удобным способом
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-graffiti-white p-8 street-shadow transform -rotate-1">
-                <h3 className="text-2xl font-oswald font-bold text-graffiti-black mb-4">
-                  📞 Прямая связь
-                </h3>
-                <div className="space-y-3 text-gray-700 font-roboto">
-                  <p>Телефон: +7 (999) 123-45-67</p>
-                  <p>Email: info@company.ru</p>
-                  <p>Telegram: @our_support</p>
-                </div>
-              </div>
-
-              <div className="bg-graffiti-white p-8 street-shadow transform rotate-1">
-                <h3 className="text-2xl font-oswald font-bold text-graffiti-black mb-4">
-                  ⚡ Быстрый старт
-                </h3>
-                <p className="text-gray-700 font-roboto mb-4">
-                  Оставьте заявку и получите персональное предложение в течение
-                  2 часов
-                </p>
-                <button className="bg-graffiti-red text-graffiti-white px-6 py-3 font-oswald font-bold hover:scale-105 transition-transform">
-                  ОСТАВИТЬ ЗАЯВКУ
                 </button>
               </div>
             </div>
