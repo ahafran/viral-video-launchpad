@@ -149,7 +149,7 @@ const PricingSection = () => {
         <div className="text-center mt-12 sm:mt-16 px-4">
           <button
             onClick={() => navigate("/guarantee")}
-            className="inline-block bg-graffiti-gold text-graffiti-black px-6 sm:px-8 py-3 sm:py-4 font-oswald font-bold text-lg sm:text-xl transform rotate-2 hover:scale-110 hover:rotate-0 transition-all duration-300 cursor-pointer animate-pulse-gold hover:animate-none shadow-lg hover:shadow-xl"
+            className="inline-block bg-graffiti-gold text-graffiti-black px-6 sm:px-8 py-3 sm:py-4 font-oswald font-bold text-lg sm:text-xl transform rotate-2 hover:scale-105 hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:bg-yellow-400 pulse"
           >
             ГАРАНТИЯ ВОЗВРАТА 30 ДНЕЙ! 💯
           </button>
