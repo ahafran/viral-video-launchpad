@@ -103,7 +103,7 @@ const PlanPremium = () => {
                 setTimeout(() => {
                   const contactSection = document.getElementById("contacts");
                   contactSection?.scrollIntoView({ behavior: "smooth" });
-                }, 100);
+                }, 300);
               }}
               className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-xl py-6"
             >

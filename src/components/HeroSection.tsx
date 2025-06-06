@@ -11,9 +11,12 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black dark:from-gray-950 dark:via-black dark:to-gray-950">
       {/* Graffiti Background Elements - скрыты на мобильных */}
-      <div className="absolute inset-0 opacity-20 dark:opacity-30 hidden sm:block">
-        <div className="absolute top-10 sm:top-20 left-4 sm:left-10 text-graffiti-gold dark:text-yellow-400 text-6xl sm:text-9xl font-oswald font-bold rotate-12 animate-pulse-gold">
+      <div className="absolute inset-0 opacity-30 dark:opacity-40 hidden sm:block">
+        <div className="absolute top-10 sm:top-20 left-4 sm:left-10 text-graffiti-gold dark:text-yellow-400 text-6xl sm:text-9xl font-oswald font-bold rotate-12 animate-bounce">
           $
+        </div>
+        <div className="absolute top-16 sm:top-32 right-8 sm:right-20 text-graffiti-gold dark:text-yellow-400 text-5xl sm:text-8xl font-oswald font-bold -rotate-12 animate-pulse">
+          ₽
         </div>
         <div className="absolute bottom-16 sm:bottom-32 right-8 sm:right-16 text-graffiti-red dark:text-red-400 text-5xl sm:text-7xl font-oswald font-bold -rotate-12 animate-spray">
           ♠
