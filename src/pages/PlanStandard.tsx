@@ -1,10 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
 const PlanStandard = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black py-20">
@@ -16,7 +21,7 @@ const PlanStandard = () => {
               document
                 .getElementById("pricing")
                 ?.scrollIntoView({ behavior: "smooth" });
-            }, 100);
+            }, 300);
           }}
           className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
         >
@@ -24,7 +29,7 @@ const PlanStandard = () => {
           Назад к тарифам
         </Button>
 
-        <Card className="max-w-2xl mx-auto p-12 bg-graffiti-white ring-4 ring-graffiti-red relative">
+        <Card className="max-w-2xl mx-auto p-12 bg-graffiti-white dark:bg-gray-800 ring-4 ring-graffiti-red relative">
           <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
             <div className="bg-graffiti-red text-graffiti-white px-6 py-2 font-oswald font-bold text-sm transform -rotate-2">
               ПОПУЛЯРНЫЙ! ⭐
@@ -35,17 +40,19 @@ const PlanStandard = () => {
             <h1 className="text-5xl font-oswald font-bold text-graffiti-red mb-4">
               СТАНДАРТНЫЙ ПЛАН
             </h1>
-            <p className="text-xl text-gray-600 mb-8">200 роликов в день</p>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+              200 роликов в день
+            </p>
 
             <div className="text-6xl font-oswald font-bold text-graffiti-red mb-2">
               454 000<span className="text-xl text-gray-500"> ₽/месяц</span>
             </div>
-            <div className="text-lg text-gray-500 mb-8">
+            <div className="text-lg text-gray-500 dark:text-gray-400 mb-8">
               Или 4 358 000 ₽/год (скидка 20%)
             </div>
 
             <div className="text-left mb-8">
-              <h3 className="text-2xl font-oswald font-bold mb-4">
+              <h3 className="text-2xl font-oswald font-bold mb-4 text-graffiti-black dark:text-white">
                 Что входит:
               </h3>
               <ul className="space-y-3">
@@ -92,10 +99,10 @@ const PlanStandard = () => {
                 </li>
               </ul>
 
-              <h3 className="text-xl font-oswald font-bold mt-6 mb-2">
+              <h3 className="text-xl font-oswald font-bold mt-6 mb-2 text-graffiti-black dark:text-white">
                 Для кого:
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 Для известных блогеров, музыкальных артистов и брендов, которым
                 необходим мощный и системный рост аудитории.
               </p>
