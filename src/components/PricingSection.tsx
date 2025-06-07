@@ -5,6 +5,10 @@ import { useNavigate } from "react-router-dom";
 const PricingSection = () => {
   const navigate = useNavigate();
 
+  const handlePlanDetails = (planType: string) => {
+    navigate(`/plan-${planType.toLowerCase()}`);
+  };
+
   const handleSubscribe = () => {
     const element = document.getElementById("application-form");
     if (element) {
@@ -137,19 +141,26 @@ const PricingSection = () => {
                 ))}
               </ul>
 
-              {/* CTA Button */}
-              <Button
-                onClick={handleSubscribe}
-                className={`w-full font-oswald font-bold text-sm xs:text-base sm:text-lg py-3 xs:py-4 sm:py-6 ${
-                  plan.popular
-                    ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
-                    : plan.color === "graffiti-yellow"
-                      ? "bg-graffiti-yellow hover:bg-yellow-600 text-graffiti-black border-2 border-gray-800 dark:bg-yellow-400 dark:hover:bg-yellow-300 dark:text-black dark:border-yellow-300"
-                      : `bg-${plan.color} hover:opacity-90 text-graffiti-white`
-                }`}
-              >
-                ОФОРМИТЬ ПОДПИСКУ 🚀
-              </Button>
+              {/* Buttons */}
+              <div className="space-y-3">
+                <Button
+                  onClick={() => handlePlanDetails(plan.name.split(" ")[0])}
+                  variant="outline"
+                  className="w-full py-2 sm:py-3 text-sm sm:text-base"
+                >
+                  Подробнее о плане
+                </Button>
+                <Button
+                  onClick={handleSubscribe}
+                  className={`w-full py-2 sm:py-3 text-sm sm:text-base font-bold ${
+                    plan.popular
+                      ? "bg-graffiti-red hover:bg-red-600 text-white"
+                      : "bg-gray-900 hover:bg-gray-800 text-white dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
+                  }`}
+                >
+                  Оформить подписку
+                </Button>
+              </div>
             </Card>
           ))}
         </div>
