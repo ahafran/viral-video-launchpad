@@ -4,6 +4,20 @@ import { useNavigate } from "react-router-dom";
 
 const PricingSection = () => {
   const navigate = useNavigate();
+
+  const handleSubscribe = () => {
+    const element = document.getElementById("application-form");
+    if (element) {
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - 120; // Увеличил смещение для лучшего позиционирования
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const plans = [
     {
       name: "БАЗОВЫЙ",
