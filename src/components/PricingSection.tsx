@@ -126,13 +126,12 @@ const PricingSection = () => {
               {/* CTA Button */}
               <Button
                 onClick={() => {
-                  const element = document.getElementById("contact-form");
-                  if (element) {
-                    element.scrollIntoView({
-                      behavior: "smooth",
-                      block: "center",
-                    });
-                  }
+                  const planRoutes = {
+                    БАЗОВЫЙ: "/plan-basic",
+                    СТАНДАРТНЫЙ: "/plan-standard",
+                    ПРЕМИУМ: "/plan-premium",
+                  };
+                  navigate(planRoutes[plan.name as keyof typeof planRoutes]);
                 }}
                 className={`w-full font-oswald font-bold text-sm xs:text-base sm:text-lg py-3 xs:py-4 sm:py-6 ${
                   plan.popular
