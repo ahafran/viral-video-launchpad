@@ -9,7 +9,7 @@ const PricingSection = () => {
     const element = document.getElementById("application-form");
     if (element) {
       const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - 80; // Уменьшил offset для более точного позиционирования
+      const offsetPosition = elementPosition - 120; // Увеличил смещение для лучшего позиционирования
 
       window.scrollTo({
         top: offsetPosition,
@@ -139,7 +139,18 @@ const PricingSection = () => {
 
               {/* CTA Button */}
               <Button
-                onClick={handleSubscribe}
+                onClick={() => {
+                  const planRoutes = {
+                    БАЗОВЫЙ: "/plan-basic",
+                    СТАНДАРТНЫЙ: "/plan-standard",
+                    ПРЕМИУМ: "/plan-premium",
+                  };
+                  const route =
+                    planRoutes[plan.name as keyof typeof planRoutes];
+                  if (route) {
+                    navigate(route);
+                  }
+                }}
                 className={`w-full font-oswald font-bold text-sm xs:text-base sm:text-lg py-3 xs:py-4 sm:py-6 ${
                   plan.popular
                     ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
@@ -148,7 +159,7 @@ const PricingSection = () => {
                       : `bg-${plan.color} hover:opacity-90 text-graffiti-white`
                 }`}
               >
-                ОФОРМИТЬ ПОДПИСКУ 🚀
+                ВЫБРАТЬ ПЛАН 🚀
               </Button>
             </Card>
           ))}
