@@ -131,7 +131,11 @@ const PricingSection = () => {
                     СТАНДАРТНЫЙ: "/plan-standard",
                     ПРЕМИУМ: "/plan-premium",
                   };
-                  navigate(planRoutes[plan.name as keyof typeof planRoutes]);
+                  const route =
+                    planRoutes[plan.name as keyof typeof planRoutes];
+                  if (route) {
+                    navigate(route);
+                  }
                 }}
                 className={`w-full font-oswald font-bold text-sm xs:text-base sm:text-lg py-3 xs:py-4 sm:py-6 ${
                   plan.popular
