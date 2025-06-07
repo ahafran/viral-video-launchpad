@@ -49,12 +49,12 @@ const PricingSection = () => {
         "Анализ ROI",
       ],
       popular: false,
-      color: "graffiti-yellow",
+      color: "graffiti-gold",
     },
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section id="pricing" className="py-20 bg-graffiti-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
