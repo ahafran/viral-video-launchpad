@@ -38,14 +38,14 @@ const PlanBasic = () => {
               50 роликов в день
             </p>
 
-            <div className="text-4xl xs:text-5xl sm:text-6xl font-oswald font-bold text-graffiti-black dark:text-white mb-2">
+            <div className="text-3xl xs:text-4xl sm:text-5xl font-oswald font-bold text-graffiti-black dark:text-white mb-2 whitespace-nowrap">
               115 000
               <span className="text-base xs:text-lg sm:text-xl text-gray-500 dark:text-gray-400">
                 {" "}
                 ₽/месяц
               </span>
             </div>
-            <div className="text-sm xs:text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 xs:mb-8">
+            <div className="text-sm xs:text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 xs:mb-8 whitespace-nowrap">
               Или 1 100 000 ₽/год (скидка 20%)
             </div>
 

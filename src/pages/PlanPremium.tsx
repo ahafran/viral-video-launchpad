@@ -38,14 +38,14 @@ const PlanPremium = () => {
               500 роликов в день
             </p>
 
-            <div className="text-3xl xs:text-4xl sm:text-6xl font-oswald font-bold text-graffiti-gold mb-2 break-words">
+            <div className="text-3xl xs:text-4xl sm:text-5xl font-oswald font-bold text-graffiti-gold mb-2 whitespace-nowrap">
               1 134 000
               <span className="text-base xs:text-lg sm:text-xl text-gray-500">
                 {" "}
                 ₽/месяц
               </span>
             </div>
-            <div className="text-sm xs:text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 xs:mb-8">
+            <div className="text-sm xs:text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 xs:mb-8 whitespace-nowrap">
               Или 10 900 000 ₽/год (скидка 20%)
             </div>
 

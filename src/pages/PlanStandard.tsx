@@ -36,7 +36,7 @@ const PlanStandard = () => {
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center pt-4">
             <h1 className="text-3xl xs:text-4xl sm:text-5xl font-oswald font-bold text-graffiti-red mb-4">
               СТАНДАРТНЫЙ ПЛАН
             </h1>
@@ -44,15 +44,15 @@ const PlanStandard = () => {
               200 роликов в день
             </p>
 
-            <div className="text-4xl xs:text-5xl sm:text-6xl font-oswald font-bold text-graffiti-red mb-2">
+            <div className="text-3xl xs:text-4xl sm:text-5xl font-oswald font-bold text-graffiti-red mb-2 whitespace-nowrap">
               454 000
               <span className="text-base xs:text-lg sm:text-xl text-gray-500">
                 {" "}
                 ₽/месяц
               </span>
             </div>
-            <div className="text-sm xs:text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 xs:mb-8">
-              Или 4 358 000 ₽/год (скидка 20%)
+            <div className="text-sm xs:text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 xs:mb-8 whitespace-nowrap">
+              Или 4 400 000 ₽/год (скидка 20%)
             </div>
 
             <div className="text-left mb-6 xs:mb-8">
