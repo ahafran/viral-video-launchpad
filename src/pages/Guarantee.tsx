@@ -99,13 +99,8 @@ const Guarantee = () => {
                 </p>
                 <button
                   onClick={() => {
-                    const contactForm = document.querySelector("form");
-                    if (contactForm) {
-                      contactForm.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
-                    }
+                    // Переходим на главную страницу к секции контактов
+                    window.location.href = "/#contacts";
                   }}
                   className="bg-graffiti-red text-graffiti-white px-8 py-3 font-oswald font-bold hover:scale-105 transition-transform"
                 >
