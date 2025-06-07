@@ -83,7 +83,7 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className={`relative p-3 xs:p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:scale-105 ${
+              className={`relative p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:scale-105 ${
                 plan.popular
                   ? "border-graffiti-red dark:border-red-400 shadow-2xl bg-white dark:bg-gray-800"
                   : "bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700"
@@ -91,76 +91,75 @@ const PricingSection = () => {
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-1 xs:-top-2 sm:-top-3 lg:-top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-graffiti-red text-graffiti-white px-2 xs:px-3 sm:px-4 lg:px-6 py-1 xs:py-1 sm:py-2 font-oswald font-bold text-[10px] xs:text-xs transform -rotate-2">
+                <div className="absolute -top-2 sm:-top-3 lg:-top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-graffiti-red text-graffiti-white px-3 sm:px-4 lg:px-6 py-1 sm:py-2 font-oswald font-bold text-xs transform -rotate-2">
                     ПОПУЛЯРНЫЙ! ⭐
                   </div>
                 </div>
               )}
 
-              {/* Plan Header */}
-              <div className="text-center mb-4 xs:mb-6 sm:mb-8">
+              {/* Plan Name */}
+              <div className={`text-center mb-3 sm:mb-4 lg:mb-6`}>
                 <h3
-                  className={`text-lg xs:text-xl sm:text-2xl lg:text-3xl font-oswald font-bold mb-1 xs:mb-2 sm:mb-3 ${
-                    plan.color === "graffiti-red"
-                      ? "text-graffiti-red"
-                      : plan.color === "graffiti-gold"
-                        ? "text-graffiti-gold"
-                        : "text-graffiti-black dark:text-white"
-                  }`}
+                  className={`text-lg sm:text-xl lg:text-3xl font-oswald font-bold text-${plan.color} mb-2 leading-tight`}
                 >
                   {plan.name}
                 </h3>
-                <p className="text-xs xs:text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2 xs:mb-3 sm:mb-4">
+                <p className="text-gray-600 font-roboto text-xs sm:text-sm lg:text-base leading-tight">
                   {plan.description}
                 </p>
               </div>
 
               {/* Price */}
-              <div className="text-center mb-4 xs:mb-6 sm:mb-8">
+              <div className="text-center mb-4 sm:mb-6 lg:mb-8">
                 <div
-                  className={`text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-oswald font-bold ${
-                    plan.color === "graffiti-red"
-                      ? "text-graffiti-red"
-                      : plan.color === "graffiti-gold"
-                        ? "text-graffiti-gold"
-                        : "text-graffiti-black dark:text-white"
-                  }`}
+                  className={`text-xl sm:text-2xl lg:text-5xl font-oswald font-bold text-${plan.color} mb-2 leading-tight`}
                 >
                   {plan.price}
-                  <span className="text-xs xs:text-sm sm:text-base text-gray-500 dark:text-gray-400 block xs:inline mt-1 xs:mt-0">
+                  <span className="text-xs sm:text-sm lg:text-lg text-gray-500 block sm:inline mt-1 sm:mt-0">
                     {plan.period}
                   </span>
                 </div>
               </div>
 
               {/* Features */}
-              <ul className="space-y-2 xs:space-y-3 sm:space-y-4 mb-6 xs:mb-8 sm:mb-10">
+              <ul className="space-y-2 sm:space-y-3 lg:space-y-4 mb-4 sm:mb-6 lg:mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li
                     key={featureIndex}
-                    className="flex items-start text-xs xs:text-sm sm:text-base"
+                    className="flex items-start font-roboto text-xs sm:text-sm lg:text-base leading-tight"
                   >
-                    <span className="text-graffiti-gold mr-2 xs:mr-3 text-sm xs:text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
+                    <span className="text-graffiti-gold mr-2 text-sm sm:text-base lg:text-xl flex-shrink-0 mt-0.5">
                       ✓
                     </span>
-                    <span className="flex-1 leading-tight">{feature}</span>
+                    <span className="flex-1">{feature}</span>
                   </li>
                 ))}
               </ul>
 
               {/* CTA Button */}
               <Button
-                onClick={handleSubscribe}
-                className={`w-full py-2 xs:py-3 sm:py-4 px-4 xs:px-6 sm:px-8 text-xs xs:text-sm sm:text-base font-oswald font-bold transition-all duration-300 ${
-                  plan.color === "graffiti-red"
-                    ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white"
-                    : plan.color === "graffiti-gold"
-                      ? "bg-graffiti-gold hover:bg-yellow-500 text-graffiti-black"
-                      : "bg-graffiti-black hover:bg-gray-800 text-graffiti-white"
+                onClick={() => {
+                  const planRoutes = {
+                    БАЗОВЫЙ: "/plan-basic",
+                    СТАНДАРТНЫЙ: "/plan-standard",
+                    ПРЕМИУМ: "/plan-premium",
+                  };
+                  const route =
+                    planRoutes[plan.name as keyof typeof planRoutes];
+                  if (route) {
+                    navigate(route);
+                  }
+                }}
+                className={`w-full font-oswald font-bold text-sm sm:text-base lg:text-lg py-3 sm:py-4 lg:py-6 ${
+                  plan.popular
+                    ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
+                    : plan.color === "graffiti-yellow"
+                      ? "bg-graffiti-yellow hover:bg-yellow-600 text-graffiti-black border-2 border-gray-800 dark:bg-yellow-400 dark:hover:bg-yellow-300 dark:text-black dark:border-yellow-300"
+                      : `bg-${plan.color} hover:opacity-90 text-graffiti-white`
                 }`}
               >
-                ПОДКЛЮЧИТЬ
+                ВЫБРАТЬ ПЛАН 🚀
               </Button>
             </Card>
           ))}

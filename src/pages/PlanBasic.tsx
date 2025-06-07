@@ -30,33 +30,33 @@ const PlanBasic = () => {
           Назад к тарифам
         </Button>
 
-        <Card className="max-w-2xl mx-auto p-3 xs:p-4 sm:p-6 lg:p-12 bg-graffiti-white dark:bg-gray-800">
+        <Card className="max-w-2xl mx-auto p-4 sm:p-6 lg:p-12 bg-graffiti-white dark:bg-gray-800">
           <div className="text-center">
-            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-5xl font-oswald font-bold text-graffiti-black dark:text-white mb-2 xs:mb-3 sm:mb-4 leading-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-oswald font-bold text-graffiti-black dark:text-white mb-3 sm:mb-4 leading-tight">
               БАЗОВЫЙ ПЛАН
             </h1>
-            <p className="text-sm xs:text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-3 xs:mb-4 sm:mb-6 lg:mb-8">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 lg:mb-8">
               50 роликов в день
             </p>
 
-            <div className="text-xl xs:text-2xl sm:text-3xl lg:text-5xl font-oswald font-bold text-graffiti-black dark:text-white mb-1 xs:mb-2 leading-tight">
+            <div className="text-2xl sm:text-3xl lg:text-5xl font-oswald font-bold text-graffiti-black dark:text-white mb-2 leading-tight">
               115 000
-              <span className="text-xs xs:text-sm sm:text-base lg:text-xl text-gray-500 dark:text-gray-400 block xs:inline mt-1 xs:mt-0">
+              <span className="text-sm sm:text-base lg:text-xl text-gray-500 dark:text-gray-400 block sm:inline mt-1 sm:mt-0">
                 {" "}
                 ₽/месяц
               </span>
             </div>
-            <div className="text-[10px] xs:text-xs sm:text-sm lg:text-lg text-gray-500 dark:text-gray-400 mb-3 xs:mb-4 sm:mb-6 lg:mb-8">
+            <div className="text-xs sm:text-sm lg:text-lg text-gray-500 dark:text-gray-400 mb-4 sm:mb-6 lg:mb-8">
               Или 1 100 000 ₽/год (скидка 20%)
             </div>
 
-            <div className="text-left mb-3 xs:mb-4 sm:mb-6 lg:mb-8">
-              <h3 className="text-base xs:text-lg sm:text-xl lg:text-2xl font-oswald font-bold mb-2 xs:mb-2 sm:mb-3 lg:mb-4">
+            <div className="text-left mb-4 sm:mb-6 lg:mb-8">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-oswald font-bold mb-2 sm:mb-3 lg:mb-4">
                 Что входит:
               </h3>
-              <ul className="space-y-1 xs:space-y-2 sm:space-y-3">
-                <li className="flex items-start text-xs xs:text-sm sm:text-base">
-                  <span className="text-graffiti-gold mr-2 xs:mr-2 sm:mr-3 text-sm xs:text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
+              <ul className="space-y-2 sm:space-y-3">
+                <li className="flex items-start text-sm sm:text-base">
+                  <span className="text-graffiti-gold mr-2 sm:mr-3 text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
                     ✓
                   </span>
                   <span className="flex-1 leading-tight">
@@ -64,8 +64,8 @@ const PlanBasic = () => {
                     платформах (TikTok, YouTube, Instagram, VK)
                   </span>
                 </li>
-                <li className="flex items-start text-xs xs:text-sm sm:text-base">
-                  <span className="text-graffiti-gold mr-2 xs:mr-2 sm:mr-3 text-sm xs:text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
+                <li className="flex items-start text-sm sm:text-base">
+                  <span className="text-graffiti-gold mr-2 sm:mr-3 text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
                     ✓
                   </span>
                   <span className="flex-1 leading-tight">
@@ -73,8 +73,8 @@ const PlanBasic = () => {
                     обновления контента
                   </span>
                 </li>
-                <li className="flex items-start text-xs xs:text-sm sm:text-base">
-                  <span className="text-graffiti-gold mr-2 xs:mr-2 sm:mr-3 text-sm xs:text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
+                <li className="flex items-start text-sm sm:text-base">
+                  <span className="text-graffiti-gold mr-2 sm:mr-3 text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
                     ✓
                   </span>
                   <span className="flex-1 leading-tight">
