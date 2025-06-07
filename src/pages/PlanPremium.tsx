@@ -30,73 +30,73 @@ const PlanPremium = () => {
           Назад к тарифам
         </Button>
 
-        <Card className="max-w-2xl mx-auto p-6 xs:p-8 sm:p-12 bg-graffiti-white dark:bg-gray-800">
+        <Card className="max-w-2xl mx-auto p-4 sm:p-6 lg:p-12 bg-graffiti-white dark:bg-gray-800">
           <div className="text-center">
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl font-oswald font-bold text-graffiti-gold mb-4">
+            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-oswald font-bold text-graffiti-gold mb-3 sm:mb-4 leading-tight">
               ПРЕМИУМ ПЛАН
             </h1>
-            <p className="text-lg xs:text-xl text-gray-600 dark:text-gray-300 mb-6 xs:mb-8">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 lg:mb-8">
               500 роликов в день
             </p>
 
-            <div className="text-3xl xs:text-4xl sm:text-5xl font-oswald font-bold text-graffiti-gold mb-2 whitespace-nowrap">
+            <div className="text-2xl sm:text-3xl lg:text-5xl font-oswald font-bold text-graffiti-gold mb-2 leading-tight">
               1 134 000
-              <span className="text-base xs:text-lg sm:text-xl text-gray-500">
+              <span className="text-sm sm:text-base lg:text-xl text-gray-500 block sm:inline mt-1 sm:mt-0">
                 {" "}
                 ₽/месяц
               </span>
             </div>
-            <div className="text-sm xs:text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 xs:mb-8 whitespace-nowrap">
+            <div className="text-xs sm:text-sm lg:text-lg text-gray-500 dark:text-gray-400 mb-4 sm:mb-6 lg:mb-8">
               Или 10 900 000 ₽/год (скидка 20%)
             </div>
 
-            <div className="text-left mb-6 xs:mb-8">
-              <h3 className="text-xl xs:text-2xl font-oswald font-bold mb-3 xs:mb-4 text-graffiti-black dark:text-white">
+            <div className="text-left mb-4 sm:mb-6 lg:mb-8">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-oswald font-bold mb-2 sm:mb-3 lg:mb-4 text-graffiti-black dark:text-white">
                 Что входит:
               </h3>
-              <ul className="space-y-2 xs:space-y-3">
-                <li className="flex items-start text-sm xs:text-base">
-                  <span className="text-graffiti-gold mr-2 xs:mr-3 text-lg xs:text-xl mt-1">
+              <ul className="space-y-2 sm:space-y-3">
+                <li className="flex items-start text-sm sm:text-base">
+                  <span className="text-graffiti-gold mr-2 sm:mr-3 text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
                     ✓
                   </span>
-                  <span>
+                  <span className="flex-1 leading-tight">
                     Публикация 500 роликов ежедневно на всех ключевых платформах
                     (TikTok, YouTube, Instagram, VK)
                   </span>
                 </li>
-                <li className="flex items-start text-sm xs:text-base">
-                  <span className="text-graffiti-gold mr-2 xs:mr-3 text-lg xs:text-xl mt-1">
+                <li className="flex items-start text-sm sm:text-base">
+                  <span className="text-graffiti-gold mr-2 sm:mr-3 text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
                     ✓
                   </span>
-                  <span>
+                  <span className="flex-1 leading-tight">
                     Персональный менеджер, который курирует весь процесс
                     продвижения
                   </span>
                 </li>
-                <li className="flex items-start text-sm xs:text-base">
-                  <span className="text-graffiti-gold mr-2 xs:mr-3 text-lg xs:text-xl mt-1">
+                <li className="flex items-start text-sm sm:text-base">
+                  <span className="text-graffiti-gold mr-2 sm:mr-3 text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
                     ✓
                   </span>
-                  <span>
+                  <span className="flex-1 leading-tight">
                     Индивидуальные решения по монтажу и адаптации контента под
                     тренды
                   </span>
                 </li>
-                <li className="flex items-start text-sm xs:text-base">
-                  <span className="text-graffiti-gold mr-2 xs:mr-3 text-lg xs:text-xl mt-1">
+                <li className="flex items-start text-sm sm:text-base">
+                  <span className="text-graffiti-gold mr-2 sm:mr-3 text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
                     ✓
                   </span>
-                  <span>
+                  <span className="flex-1 leading-tight">
                     Ежемесячные отчёты и аналитика с рекомендациями по улучшению
                     ROI
                   </span>
                 </li>
               </ul>
 
-              <h3 className="text-lg xs:text-xl font-oswald font-bold mt-4 xs:mt-6 mb-2 text-graffiti-black dark:text-white">
+              <h3 className="text-base sm:text-lg lg:text-xl font-oswald font-bold mt-3 sm:mt-4 lg:mt-6 mb-2 text-graffiti-black dark:text-white">
                 Для кого:
               </h3>
-              <p className="text-sm xs:text-base text-gray-600 dark:text-gray-300">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-tight">
                 Для топовых звёзд, крупных брендов и агентств, которым важно
                 доминировать в медиа пространстве и быстро наращивать охваты.
               </p>
@@ -110,7 +110,7 @@ const PlanPremium = () => {
                   contactSection?.scrollIntoView({ behavior: "smooth" });
                 }, 500);
               }}
-              className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-lg xs:text-xl py-4 xs:py-6"
+              className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-base sm:text-lg lg:text-xl py-3 sm:py-4 lg:py-6"
             >
               ОФОРМИТЬ ПОДПИСКУ 🚀
             </Button>

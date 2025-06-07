@@ -30,63 +30,63 @@ const PlanBasic = () => {
           Назад к тарифам
         </Button>
 
-        <Card className="max-w-2xl mx-auto p-6 xs:p-8 sm:p-12 bg-graffiti-white dark:bg-gray-800">
+        <Card className="max-w-2xl mx-auto p-4 sm:p-6 lg:p-12 bg-graffiti-white dark:bg-gray-800">
           <div className="text-center">
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl font-oswald font-bold text-graffiti-black dark:text-white mb-4">
+            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-oswald font-bold text-graffiti-black dark:text-white mb-3 sm:mb-4 leading-tight">
               БАЗОВЫЙ ПЛАН
             </h1>
-            <p className="text-lg xs:text-xl text-gray-600 dark:text-gray-300 mb-6 xs:mb-8">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 lg:mb-8">
               50 роликов в день
             </p>
 
-            <div className="text-3xl xs:text-4xl sm:text-5xl font-oswald font-bold text-graffiti-black dark:text-white mb-2 whitespace-nowrap">
+            <div className="text-2xl sm:text-3xl lg:text-5xl font-oswald font-bold text-graffiti-black dark:text-white mb-2 leading-tight">
               115 000
-              <span className="text-base xs:text-lg sm:text-xl text-gray-500 dark:text-gray-400">
+              <span className="text-sm sm:text-base lg:text-xl text-gray-500 dark:text-gray-400 block sm:inline mt-1 sm:mt-0">
                 {" "}
                 ₽/месяц
               </span>
             </div>
-            <div className="text-sm xs:text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 xs:mb-8 whitespace-nowrap">
+            <div className="text-xs sm:text-sm lg:text-lg text-gray-500 dark:text-gray-400 mb-4 sm:mb-6 lg:mb-8">
               Или 1 100 000 ₽/год (скидка 20%)
             </div>
 
-            <div className="text-left mb-6 xs:mb-8">
-              <h3 className="text-xl xs:text-2xl font-oswald font-bold mb-3 xs:mb-4">
+            <div className="text-left mb-4 sm:mb-6 lg:mb-8">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-oswald font-bold mb-2 sm:mb-3 lg:mb-4">
                 Что входит:
               </h3>
-              <ul className="space-y-2 xs:space-y-3">
-                <li className="flex items-start text-sm xs:text-base">
-                  <span className="text-graffiti-gold mr-2 xs:mr-3 text-lg xs:text-xl mt-1">
+              <ul className="space-y-2 sm:space-y-3">
+                <li className="flex items-start text-sm sm:text-base">
+                  <span className="text-graffiti-gold mr-2 sm:mr-3 text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
                     ✓
                   </span>
-                  <span>
+                  <span className="flex-1 leading-tight">
                     Публикация 50 коротких роликов в день на всех ключевых
                     платформах (TikTok, YouTube, Instagram, VK)
                   </span>
                 </li>
-                <li className="flex items-start text-sm xs:text-base">
-                  <span className="text-graffiti-gold mr-2 xs:mr-3 text-lg xs:text-xl mt-1">
+                <li className="flex items-start text-sm sm:text-base">
+                  <span className="text-graffiti-gold mr-2 sm:mr-3 text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
                     ✓
                   </span>
-                  <span>
+                  <span className="flex-1 leading-tight">
                     Профессиональный монтаж роликов с высокой частотой
                     обновления контента
                   </span>
                 </li>
-                <li className="flex items-start text-sm xs:text-base">
-                  <span className="text-graffiti-gold mr-2 xs:mr-3 text-lg xs:text-xl mt-1">
+                <li className="flex items-start text-sm sm:text-base">
+                  <span className="text-graffiti-gold mr-2 sm:mr-3 text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
                     ✓
                   </span>
-                  <span>
+                  <span className="flex-1 leading-tight">
                     Ежедневный мониторинг и отчёты по результатам публикаций
                   </span>
                 </li>
               </ul>
 
-              <h3 className="text-lg xs:text-xl font-oswald font-bold mt-4 xs:mt-6 mb-2 text-graffiti-black dark:text-white">
+              <h3 className="text-base sm:text-lg lg:text-xl font-oswald font-bold mt-3 sm:mt-4 lg:mt-6 mb-2 text-graffiti-black dark:text-white">
                 Для кого:
               </h3>
-              <p className="text-sm xs:text-base text-gray-600 dark:text-gray-300">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-tight">
                 Для медийных личностей, артистов и блогеров, которые хотят
                 увеличить охват и начать масштабное продвижение без лишних
                 хлопот.
@@ -101,7 +101,7 @@ const PlanBasic = () => {
                   contactSection?.scrollIntoView({ behavior: "smooth" });
                 }, 300);
               }}
-              className="w-full bg-graffiti-black hover:bg-gray-800 text-graffiti-white font-oswald font-bold text-lg xs:text-xl py-4 xs:py-6"
+              className="w-full bg-graffiti-black hover:bg-gray-800 text-graffiti-white font-oswald font-bold text-base sm:text-lg lg:text-xl py-3 sm:py-4 lg:py-6"
             >
               ОФОРМИТЬ ПОДПИСКУ 🚀
             </Button>

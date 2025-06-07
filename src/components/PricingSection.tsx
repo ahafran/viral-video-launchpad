@@ -79,11 +79,11 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:gap-8 lg:grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid gap-4 sm:gap-6 lg:grid-cols-3 max-w-6xl mx-auto px-4 sm:px-6">
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className={`relative p-6 sm:p-8 transition-all duration-300 hover:scale-105 ${
+              className={`relative p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:scale-105 ${
                 plan.popular
                   ? "border-graffiti-red dark:border-red-400 shadow-2xl bg-white dark:bg-gray-800"
                   : "bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700"
@@ -91,48 +91,48 @@ const PricingSection = () => {
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-graffiti-red text-graffiti-white px-4 sm:px-6 py-1 sm:py-2 font-oswald font-bold text-xs sm:text-sm transform -rotate-2">
+                <div className="absolute -top-2 sm:-top-3 lg:-top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-graffiti-red text-graffiti-white px-3 sm:px-4 lg:px-6 py-1 sm:py-2 font-oswald font-bold text-xs transform -rotate-2">
                     ПОПУЛЯРНЫЙ! ⭐
                   </div>
                 </div>
               )}
 
               {/* Plan Name */}
-              <div className={`text-center mb-4 sm:mb-6`}>
+              <div className={`text-center mb-3 sm:mb-4 lg:mb-6`}>
                 <h3
-                  className={`text-xl xs:text-2xl sm:text-3xl font-oswald font-bold text-${plan.color} mb-2 px-1 xs:px-2`}
+                  className={`text-lg sm:text-xl lg:text-3xl font-oswald font-bold text-${plan.color} mb-2 leading-tight`}
                 >
                   {plan.name}
                 </h3>
-                <p className="text-gray-600 font-roboto text-xs xs:text-sm sm:text-base px-1 xs:px-2">
+                <p className="text-gray-600 font-roboto text-xs sm:text-sm lg:text-base leading-tight">
                   {plan.description}
                 </p>
               </div>
 
               {/* Price */}
-              <div className="text-center mb-6 sm:mb-8">
+              <div className="text-center mb-4 sm:mb-6 lg:mb-8">
                 <div
-                  className={`text-2xl xs:text-3xl sm:text-5xl font-oswald font-bold text-${plan.color} mb-2`}
+                  className={`text-xl sm:text-2xl lg:text-5xl font-oswald font-bold text-${plan.color} mb-2 leading-tight`}
                 >
                   {plan.price}
-                  <span className="text-xs xs:text-sm sm:text-lg text-gray-500">
+                  <span className="text-xs sm:text-sm lg:text-lg text-gray-500 block sm:inline mt-1 sm:mt-0">
                     {plan.period}
                   </span>
                 </div>
               </div>
 
               {/* Features */}
-              <ul className="space-y-2 xs:space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <ul className="space-y-2 sm:space-y-3 lg:space-y-4 mb-4 sm:mb-6 lg:mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li
                     key={featureIndex}
-                    className="flex items-start font-roboto text-xs xs:text-sm sm:text-base px-1 xs:px-2"
+                    className="flex items-start font-roboto text-xs sm:text-sm lg:text-base leading-tight"
                   >
-                    <span className="text-graffiti-gold mr-2 sm:mr-3 text-base xs:text-lg sm:text-xl flex-shrink-0">
+                    <span className="text-graffiti-gold mr-2 text-sm sm:text-base lg:text-xl flex-shrink-0 mt-0.5">
                       ✓
                     </span>
-                    {feature}
+                    <span className="flex-1">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -151,7 +151,7 @@ const PricingSection = () => {
                     navigate(route);
                   }
                 }}
-                className={`w-full font-oswald font-bold text-sm xs:text-base sm:text-lg py-3 xs:py-4 sm:py-6 ${
+                className={`w-full font-oswald font-bold text-sm sm:text-base lg:text-lg py-3 sm:py-4 lg:py-6 ${
                   plan.popular
                     ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
                     : plan.color === "graffiti-yellow"
@@ -166,10 +166,10 @@ const PricingSection = () => {
         </div>
 
         {/* Money Back Guarantee */}
-        <div className="text-center mt-12 sm:mt-16 px-4">
+        <div className="text-center mt-8 sm:mt-12 lg:mt-16 px-4">
           <button
             onClick={() => navigate("/guarantee")}
-            className="inline-block bg-graffiti-gold text-graffiti-black px-6 sm:px-8 py-3 sm:py-4 font-oswald font-bold text-lg sm:text-xl transform rotate-2 hover:scale-105 hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:bg-yellow-400 pulse"
+            className="inline-block bg-graffiti-gold text-graffiti-black px-4 sm:px-6 lg:px-8 py-3 sm:py-4 font-oswald font-bold text-base sm:text-lg lg:text-xl transform rotate-2 hover:scale-105 hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:bg-yellow-400 pulse"
           >
             ГАРАНТИЯ ВОЗВРАТА 30 ДНЕЙ! 💯
           </button>
