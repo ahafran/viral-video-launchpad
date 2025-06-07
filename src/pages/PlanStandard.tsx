@@ -21,7 +21,7 @@ const PlanStandard = () => {
               document
                 .getElementById("pricing")
                 ?.scrollIntoView({ behavior: "smooth" });
-            }, 300);
+            }, 100);
           }}
           className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
         >
