@@ -87,11 +87,11 @@ const PricingSection = () => {
               {/* Plan Name */}
               <div className={`text-center mb-4 sm:mb-6`}>
                 <h3
-                  className={`text-2xl sm:text-3xl font-oswald font-bold text-${plan.color} mb-2 px-2`}
+                  className={`text-xl xs:text-2xl sm:text-3xl font-oswald font-bold text-${plan.color} mb-2 px-1 xs:px-2`}
                 >
                   {plan.name}
                 </h3>
-                <p className="text-gray-600 font-roboto text-sm sm:text-base px-2">
+                <p className="text-gray-600 font-roboto text-xs xs:text-sm sm:text-base px-1 xs:px-2">
                   {plan.description}
                 </p>
               </div>
@@ -99,23 +99,23 @@ const PricingSection = () => {
               {/* Price */}
               <div className="text-center mb-6 sm:mb-8">
                 <div
-                  className={`text-3xl sm:text-5xl font-oswald font-bold text-${plan.color} mb-2`}
+                  className={`text-2xl xs:text-3xl sm:text-5xl font-oswald font-bold text-${plan.color} mb-2`}
                 >
                   {plan.price}
-                  <span className="text-sm sm:text-lg text-gray-500">
+                  <span className="text-xs xs:text-sm sm:text-lg text-gray-500">
                     {plan.period}
                   </span>
                 </div>
               </div>
 
               {/* Features */}
-              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <ul className="space-y-2 xs:space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li
                     key={featureIndex}
-                    className="flex items-start font-roboto text-sm sm:text-base px-2"
+                    className="flex items-start font-roboto text-xs xs:text-sm sm:text-base px-1 xs:px-2"
                   >
-                    <span className="text-graffiti-gold mr-2 sm:mr-3 text-lg sm:text-xl flex-shrink-0">
+                    <span className="text-graffiti-gold mr-2 sm:mr-3 text-base xs:text-lg sm:text-xl flex-shrink-0">
                       ✓
                     </span>
                     {feature}
@@ -133,7 +133,7 @@ const PricingSection = () => {
                   ];
                   navigate(routes[index]);
                 }}
-                className={`w-full font-oswald font-bold text-base sm:text-lg py-4 sm:py-6 ${
+                className={`w-full font-oswald font-bold text-sm xs:text-base sm:text-lg py-3 xs:py-4 sm:py-6 ${
                   plan.popular
                     ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
                     : plan.color === "graffiti-yellow"

@@ -29,29 +29,33 @@ const PlanPremium = () => {
           Назад к тарифам
         </Button>
 
-        <Card className="max-w-2xl mx-auto p-12 bg-graffiti-white dark:bg-gray-800">
+        <Card className="max-w-2xl mx-auto p-6 xs:p-8 sm:p-12 bg-graffiti-white dark:bg-gray-800">
           <div className="text-center">
-            <h1 className="text-5xl font-oswald font-bold text-graffiti-gold mb-4">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl font-oswald font-bold text-graffiti-gold mb-4">
               ПРЕМИУМ ПЛАН
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-lg xs:text-xl text-gray-600 dark:text-gray-300 mb-6 xs:mb-8">
               500 роликов в день
             </p>
 
-            <div className="text-6xl font-oswald font-bold text-graffiti-gold mb-2 whitespace-nowrap">
-              1 134 000<span className="text-xl text-gray-500"> ₽/месяц</span>
+            <div className="text-3xl xs:text-4xl sm:text-6xl font-oswald font-bold text-graffiti-gold mb-2 break-words">
+              1 134 000
+              <span className="text-base xs:text-lg sm:text-xl text-gray-500">
+                {" "}
+                ₽/месяц
+              </span>
             </div>
-            <div className="text-lg text-gray-500 dark:text-gray-400 mb-8">
+            <div className="text-sm xs:text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 xs:mb-8">
               Или 10 900 000 ₽/год (скидка 20%)
             </div>
 
-            <div className="text-left mb-8">
-              <h3 className="text-2xl font-oswald font-bold mb-4 text-graffiti-black dark:text-white">
+            <div className="text-left mb-6 xs:mb-8">
+              <h3 className="text-xl xs:text-2xl font-oswald font-bold mb-3 xs:mb-4 text-graffiti-black dark:text-white">
                 Что входит:
               </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+              <ul className="space-y-2 xs:space-y-3">
+                <li className="flex items-start text-sm xs:text-base">
+                  <span className="text-graffiti-gold mr-2 xs:mr-3 text-lg xs:text-xl mt-1">
                     ✓
                   </span>
                   <span>
@@ -59,8 +63,8 @@ const PlanPremium = () => {
                     (TikTok, YouTube, Instagram, VK)
                   </span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                <li className="flex items-start text-sm xs:text-base">
+                  <span className="text-graffiti-gold mr-2 xs:mr-3 text-lg xs:text-xl mt-1">
                     ✓
                   </span>
                   <span>
@@ -68,8 +72,8 @@ const PlanPremium = () => {
                     продвижения
                   </span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                <li className="flex items-start text-sm xs:text-base">
+                  <span className="text-graffiti-gold mr-2 xs:mr-3 text-lg xs:text-xl mt-1">
                     ✓
                   </span>
                   <span>
@@ -77,8 +81,8 @@ const PlanPremium = () => {
                     тренды
                   </span>
                 </li>
-                <li className="flex items-start">
-                  <span className="text-graffiti-gold mr-3 text-xl mt-1">
+                <li className="flex items-start text-sm xs:text-base">
+                  <span className="text-graffiti-gold mr-2 xs:mr-3 text-lg xs:text-xl mt-1">
                     ✓
                   </span>
                   <span>
@@ -88,10 +92,10 @@ const PlanPremium = () => {
                 </li>
               </ul>
 
-              <h3 className="text-xl font-oswald font-bold mt-6 mb-2 text-graffiti-black dark:text-white">
+              <h3 className="text-lg xs:text-xl font-oswald font-bold mt-4 xs:mt-6 mb-2 text-graffiti-black dark:text-white">
                 Для кого:
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-sm xs:text-base text-gray-600 dark:text-gray-300">
                 Для топовых звёзд, крупных брендов и агентств, которым важно
                 доминировать в медиа пространстве и быстро наращивать охваты.
               </p>
@@ -105,7 +109,7 @@ const PlanPremium = () => {
                   contactSection?.scrollIntoView({ behavior: "smooth" });
                 }, 100);
               }}
-              className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-xl py-6"
+              className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-lg xs:text-xl py-4 xs:py-6"
             >
               ОФОРМИТЬ ПОДПИСКУ 🚀
             </Button>
