@@ -12,8 +12,8 @@ const PlanPremium = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black py-[5rem]">
-      <div className="container mx-auto px-[1rem]">
+    <div className="min-h-screen bg-gradient-to-br from-graffiti-black via-gray-900 to-graffiti-black py-20">
+      <div className="container mx-auto px-4">
         <Button
           onClick={() => {
             navigate("/");
@@ -24,39 +24,39 @@ const PlanPremium = () => {
               }
             }, 100);
           }}
-          className="mb-[2rem] bg-gray-700 hover:bg-gray-600 text-white"
+          className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
         >
           <Icon name="ArrowLeft" className="mr-2" />
           Назад к тарифам
         </Button>
 
-        <Card className="max-w-[32rem] mx-auto p-[0.75rem] xs:p-[1rem] sm:p-[1.5rem] lg:p-[3rem] bg-graffiti-white dark:bg-gray-800">
+        <Card className="max-w-2xl mx-auto p-3 xs:p-4 sm:p-6 lg:p-12 bg-graffiti-white dark:bg-gray-800">
           <div className="text-center">
-            <h1 className="text-[1.25rem] xs:text-[1.5rem] sm:text-[1.875rem] lg:text-[3.125rem] font-oswald font-bold text-graffiti-gold mb-[0.5rem] xs:mb-[0.75rem] sm:mb-[1rem] leading-tight">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-5xl font-oswald font-bold text-graffiti-gold mb-2 xs:mb-3 sm:mb-4 leading-tight">
               ПРЕМИУМ ПЛАН
             </h1>
-            <p className="text-[0.875rem] xs:text-[1rem] sm:text-[1.125rem] lg:text-[1.25rem] text-gray-600 dark:text-gray-300 mb-[0.75rem] xs:mb-[1rem] sm:mb-[1.5rem] lg:mb-[2rem]">
+            <p className="text-sm xs:text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-3 xs:mb-4 sm:mb-6 lg:mb-8">
               500 роликов в день
             </p>
 
-            <div className="text-[1.25rem] xs:text-[1.5rem] sm:text-[1.875rem] lg:text-[3.125rem] font-oswald font-bold text-graffiti-gold mb-[0.25rem] xs:mb-[0.5rem] leading-tight">
+            <div className="text-xl xs:text-2xl sm:text-3xl lg:text-5xl font-oswald font-bold text-graffiti-gold mb-1 xs:mb-2 leading-tight">
               1 134 000
-              <span className="text-[0.75rem] xs:text-[0.875rem] sm:text-[1rem] lg:text-[1.25rem] text-gray-500 block xs:inline mt-[0.25rem] xs:mt-0">
+              <span className="text-xs xs:text-sm sm:text-base lg:text-xl text-gray-500 block xs:inline mt-1 xs:mt-0">
                 {" "}
                 ₽/месяц
               </span>
             </div>
-            <div className="text-[0.625rem] xs:text-[0.75rem] sm:text-[0.875rem] lg:text-[1.125rem] text-gray-500 dark:text-gray-400 mb-[0.75rem] xs:mb-[1rem] sm:mb-[1.5rem] lg:mb-[2rem]">
+            <div className="text-[10px] xs:text-xs sm:text-sm lg:text-lg text-gray-500 dark:text-gray-400 mb-3 xs:mb-4 sm:mb-6 lg:mb-8">
               Или 10 900 000 ₽/год (скидка 20%)
             </div>
 
-            <div className="text-left mb-[0.75rem] xs:mb-[1rem] sm:mb-[1.5rem] lg:mb-[2rem]">
-              <h3 className="text-[1rem] xs:text-[1.125rem] sm:text-[1.25rem] lg:text-[1.5rem] font-oswald font-bold mb-[0.5rem] xs:mb-[0.5rem] sm:mb-[0.75rem] lg:mb-[1rem] text-graffiti-black dark:text-white">
+            <div className="text-left mb-3 xs:mb-4 sm:mb-6 lg:mb-8">
+              <h3 className="text-base xs:text-lg sm:text-xl lg:text-2xl font-oswald font-bold mb-2 xs:mb-2 sm:mb-3 lg:mb-4 text-graffiti-black dark:text-white">
                 Что входит:
               </h3>
-              <ul className="space-y-[0.25rem] xs:space-y-[0.5rem] sm:space-y-[0.75rem]">
-                <li className="flex items-start text-[0.75rem] xs:text-[0.875rem] sm:text-[1rem]">
-                  <span className="text-graffiti-gold mr-[0.5rem] xs:mr-[0.5rem] sm:mr-[0.75rem] text-[0.875rem] xs:text-[1rem] sm:text-[1.125rem] lg:text-[1.25rem] mt-[0.125rem] flex-shrink-0">
+              <ul className="space-y-1 xs:space-y-2 sm:space-y-3">
+                <li className="flex items-start text-xs xs:text-sm sm:text-base">
+                  <span className="text-graffiti-gold mr-2 xs:mr-2 sm:mr-3 text-sm xs:text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
                     ✓
                   </span>
                   <span className="flex-1 leading-tight">
@@ -93,10 +93,10 @@ const PlanPremium = () => {
                 </li>
               </ul>
 
-              <h3 className="text-[1rem] sm:text-[1.125rem] lg:text-[1.25rem] font-oswald font-bold mt-[0.75rem] sm:mt-[1rem] lg:mt-[1.5rem] mb-[0.5rem] text-graffiti-black dark:text-white">
+              <h3 className="text-base sm:text-lg lg:text-xl font-oswald font-bold mt-3 sm:mt-4 lg:mt-6 mb-2 text-graffiti-black dark:text-white">
                 Для кого:
               </h3>
-              <p className="text-[0.875rem] sm:text-[1rem] text-gray-600 dark:text-gray-300 leading-tight">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-tight">
                 Для топовых звёзд, крупных брендов и агентств, которым важно
                 доминировать в медиа пространстве и быстро наращивать охваты.
               </p>
@@ -110,7 +110,7 @@ const PlanPremium = () => {
                   contactSection?.scrollIntoView({ behavior: "smooth" });
                 }, 500);
               }}
-              className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-[1rem] sm:text-[1.125rem] lg:text-[1.25rem] py-[0.75rem] sm:py-[1rem] lg:py-[1.5rem]"
+              className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-base sm:text-lg lg:text-xl py-3 sm:py-4 lg:py-6"
             >
               ОФОРМИТЬ ПОДПИСКУ 🚀
             </Button>
