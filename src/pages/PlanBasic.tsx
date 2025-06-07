@@ -18,10 +18,11 @@ const PlanBasic = () => {
           onClick={() => {
             navigate("/");
             setTimeout(() => {
-              document
-                .getElementById("pricing")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }, 100);
+              const pricingSection = document.getElementById("pricing");
+              if (pricingSection) {
+                pricingSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }, 500);
           }}
           className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
         >
