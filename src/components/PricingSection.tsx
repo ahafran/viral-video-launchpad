@@ -4,6 +4,17 @@ import { useNavigate } from "react-router-dom";
 
 const PricingSection = () => {
   const navigate = useNavigate();
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const yOffset = -80;
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   const plans = [
     {
       name: "БАЗОВЫЙ",
@@ -150,7 +161,7 @@ const PricingSection = () => {
         {/* Money Back Guarantee */}
         <div className="text-center mt-12 sm:mt-16 px-4">
           <button
-            onClick={() => navigate("/guarantee")}
+            onClick={() => scrollToSection("contact")}
             className="inline-block bg-graffiti-gold text-graffiti-black px-6 sm:px-8 py-3 sm:py-4 font-oswald font-bold text-lg sm:text-xl transform rotate-2 hover:scale-105 hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:bg-yellow-400 pulse"
           >
             ГАРАНТИЯ ВОЗВРАТА 30 ДНЕЙ! 💯
