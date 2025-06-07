@@ -102,7 +102,13 @@ const Guarantee = () => {
                 </p>
                 <button
                   onClick={() => {
-                    navigate("/#application-form");
+                    navigate("/#contacts");
+                    setTimeout(() => {
+                      const form = document.getElementById("application-form");
+                      if (form) {
+                        form.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }, 100);
                   }}
                   className="bg-graffiti-red text-graffiti-white px-8 py-3 font-oswald font-bold hover:scale-105 transition-transform"
                 >
