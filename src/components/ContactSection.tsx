@@ -29,7 +29,10 @@ const ContactSection = () => {
 
         <div className="max-w-6xl mx-auto grid gap-6 sm:gap-8 lg:grid-cols-3">
           {/* Форма заявки */}
-          <Card className="lg:col-span-2 p-6 sm:p-8 bg-graffiti-white dark:bg-gray-800">
+          <Card
+            id="application-form"
+            className="lg:col-span-2 p-6 sm:p-8 bg-graffiti-white dark:bg-gray-800"
+          >
             <h3 className="text-2xl sm:text-3xl font-oswald font-bold mb-4 sm:mb-6 text-graffiti-black dark:text-white px-2">
               Заявка на сотрудничество
             </h3>
