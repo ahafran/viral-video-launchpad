@@ -9,7 +9,7 @@ const PricingSection = () => {
     const element = document.getElementById("application-form");
     if (element) {
       const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - 120; // Увеличил offset для точного попадания на форму
+      const offsetPosition = elementPosition - 80; // Уменьшил offset для более точного позиционирования
 
       window.scrollTo({
         top: offsetPosition,
