@@ -2,9 +2,13 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   const scrollToContact = () => {
-    const contactSection = document.getElementById("contacts");
+    const contactSection = document.getElementById("application-form");
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
+      const offsetTop = contactSection.offsetTop - 80; // Добавляем отступ 80px сверху
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
     }
   };
 
