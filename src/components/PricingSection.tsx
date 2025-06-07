@@ -98,28 +98,24 @@ const PricingSection = () => {
                 </div>
               )}
 
-              {/* Plan Name */}
-              <div className={`text-center mb-3 sm:mb-4 lg:mb-6`}>
+              {/* Plan Header */}
+              <div className="text-center mb-6 sm:mb-8">
                 <h3
-                  className={`text-lg sm:text-xl lg:text-3xl font-oswald font-bold text-${plan.color} mb-2 leading-tight`}
+                  className={`text-lg sm:text-xl lg:text-2xl font-oswald font-bold mb-2 text-${plan.color} dark:text-white`}
                 >
                   {plan.name}
                 </h3>
-                <p className="text-gray-600 font-roboto text-xs sm:text-sm lg:text-base leading-tight">
-                  {plan.description}
-                </p>
-              </div>
-
-              {/* Price */}
-              <div className="text-center mb-4 sm:mb-6 lg:mb-8">
-                <div
-                  className={`text-xl sm:text-2xl lg:text-5xl font-oswald font-bold text-${plan.color} mb-2 leading-tight`}
-                >
-                  {plan.price}
-                  <span className="text-xs sm:text-sm lg:text-lg text-gray-500 block sm:inline mt-1 sm:mt-0">
+                <div className="mb-2">
+                  <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
+                    {plan.price}
+                  </span>
+                  <span className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 whitespace-nowrap">
                     {plan.period}
                   </span>
                 </div>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                  {plan.description}
+                </p>
               </div>
 
               {/* Features */}
