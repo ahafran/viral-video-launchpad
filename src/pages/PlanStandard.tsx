@@ -121,7 +121,7 @@ const PlanStandard = () => {
                   contactSection?.scrollIntoView({ behavior: "smooth" });
                 }, 100);
               }}
-              className="w-full bg-graffiti-red hover:bg-red-600 text-graffiti-white font-oswald font-bold text-base sm:text-lg lg:text-xl py-3 sm:py-4 lg:py-6 street-shadow"
+              className="w-full bg-graffiti-red hover:bg-red-600 text-graffiti-white font-oswald font-bold text-base sm:text-lg lg:text-xl py-3 sm:py-4 lg:py-6"
             >
               ОФОРМИТЬ ПОДПИСКУ 🚀
             </Button>

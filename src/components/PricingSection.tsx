@@ -153,7 +153,7 @@ const PricingSection = () => {
                 }}
                 className={`w-full font-oswald font-bold text-sm sm:text-base lg:text-lg py-3 sm:py-4 lg:py-6 ${
                   plan.popular
-                    ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
+                    ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white"
                     : plan.color === "graffiti-yellow"
                       ? "bg-graffiti-yellow hover:bg-yellow-600 text-graffiti-black border-2 border-gray-800 dark:bg-yellow-400 dark:hover:bg-yellow-300 dark:text-black dark:border-yellow-300"
                       : `bg-${plan.color} hover:opacity-90 text-graffiti-white`
