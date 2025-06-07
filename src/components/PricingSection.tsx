@@ -126,11 +126,11 @@ const PricingSection = () => {
               {/* CTA Button */}
               <Button
                 onClick={() => {
-                  const contactSection = document.getElementById("contact");
-                  if (contactSection) {
-                    contactSection.scrollIntoView({
+                  const element = document.getElementById("contact-form");
+                  if (element) {
+                    element.scrollIntoView({
                       behavior: "smooth",
-                      block: "start",
+                      block: "center",
                     });
                   }
                 }}
