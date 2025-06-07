@@ -1,6 +1,9 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Guarantee = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -99,8 +102,7 @@ const Guarantee = () => {
                 </p>
                 <button
                   onClick={() => {
-                    // Переходим на главную страницу к секции контактов
-                    window.location.href = "/#contacts";
+                    navigate("/#contacts");
                   }}
                   className="bg-graffiti-red text-graffiti-white px-8 py-3 font-oswald font-bold hover:scale-105 transition-transform"
                 >
