@@ -4,6 +4,18 @@ import { useNavigate } from "react-router-dom";
 
 const PricingSection = () => {
   const navigate = useNavigate();
+
+  const scrollToContact = () => {
+    const contactElement = document.getElementById("contact");
+    if (contactElement) {
+      const offsetTop = contactElement.offsetTop - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const plans = [
     {
       name: "БАЗОВЫЙ",
@@ -125,14 +137,7 @@ const PricingSection = () => {
 
               {/* CTA Button */}
               <Button
-                onClick={() => {
-                  const routes = [
-                    "/plan-basic",
-                    "/plan-standard",
-                    "/plan-premium",
-                  ];
-                  navigate(routes[index]);
-                }}
+                onClick={scrollToContact}
                 className={`w-full font-oswald font-bold text-sm xs:text-base sm:text-lg py-3 xs:py-4 sm:py-6 ${
                   plan.popular
                     ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white street-shadow"
