@@ -21,7 +21,7 @@ const PlanPremium = () => {
               document
                 .getElementById("pricing")
                 ?.scrollIntoView({ behavior: "smooth" });
-            }, 100);
+            }, 500);
           }}
           className="mb-8 bg-gray-700 hover:bg-gray-600 text-white"
         >
@@ -107,7 +107,7 @@ const PlanPremium = () => {
                 setTimeout(() => {
                   const contactSection = document.getElementById("contacts");
                   contactSection?.scrollIntoView({ behavior: "smooth" });
-                }, 100);
+                }, 500);
               }}
               className="w-full bg-graffiti-gold hover:opacity-90 text-graffiti-black font-oswald font-bold text-lg xs:text-xl py-4 xs:py-6"
             >
