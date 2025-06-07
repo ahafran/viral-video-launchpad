@@ -126,12 +126,19 @@ const PricingSection = () => {
               {/* CTA Button */}
               <Button
                 onClick={() => {
-                  const routes = [
-                    "/plan-basic",
-                    "/plan-standard",
-                    "/plan-premium",
-                  ];
-                  navigate(routes[index]);
+                  const formElement = document.getElementById("contact-form");
+                  if (formElement) {
+                    const offset = 150; // Увеличиваем отступ до 150px
+                    const elementPosition =
+                      formElement.getBoundingClientRect().top;
+                    const offsetPosition =
+                      elementPosition + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth",
+                    });
+                  }
                 }}
                 className={`w-full font-oswald font-bold text-sm xs:text-base sm:text-lg py-3 xs:py-4 sm:py-6 ${
                   plan.popular
@@ -141,7 +148,7 @@ const PricingSection = () => {
                       : `bg-${plan.color} hover:opacity-90 text-graffiti-white`
                 }`}
               >
-                ВЫБРАТЬ ПЛАН 🚀
+                ОФОРМИТЬ ПОДПИСКУ 📝
               </Button>
             </Card>
           ))}
