@@ -100,6 +100,16 @@ const Guarantee = () => {
                 <button
                   onClick={() => {
                     window.location.href = "/#contacts";
+                    setTimeout(() => {
+                      const contactSection =
+                        document.getElementById("contacts");
+                      if (contactSection) {
+                        contactSection.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                      }
+                    }, 100);
                   }}
                   className="bg-graffiti-red text-graffiti-white px-8 py-3 font-oswald font-bold hover:scale-105 transition-transform"
                 >
