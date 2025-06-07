@@ -151,7 +151,7 @@ const PricingSection = () => {
                   Подробнее о плане
                 </Button>
                 <Button
-                  onClick={handleSubscribe}
+                  onClick={() => handlePlanDetails(plan.name.split(" ")[0])}
                   className={`w-full py-2 sm:py-3 text-sm sm:text-base font-bold ${
                     plan.popular
                       ? "bg-graffiti-red hover:bg-red-600 text-white"
