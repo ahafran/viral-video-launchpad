@@ -68,18 +68,21 @@ const PricingSection = () => {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-graffiti-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+    <section
+      id="pricing"
+      className="py-[5rem] bg-graffiti-white dark:bg-gray-900"
+    >
+      <div className="max-w-[87.5rem] mx-auto">
+        <div className="text-center mb-[4rem]">
+          <h2 className="text-[2.5rem] md:text-[3.125rem] font-bold text-gray-900 dark:text-white mb-[1rem]">
             Наши тарифы
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-[1.25rem] text-gray-600 dark:text-gray-300 max-w-[48rem] mx-auto">
             Выберите подходящий план для вашего контента
           </p>
         </div>
 
-        <div className="grid gap-4 sm:gap-6 lg:grid-cols-3 max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="grid gap-[1rem] sm:gap-[1.5rem] lg:grid-cols-3 max-w-[75rem] mx-auto px-[1rem] sm:px-[1.5rem]">
           {plans.map((plan, index) => (
             <Card
               key={index}
@@ -91,17 +94,17 @@ const PricingSection = () => {
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-1 xs:-top-2 sm:-top-3 lg:-top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-graffiti-red text-graffiti-white px-2 xs:px-3 sm:px-4 lg:px-6 py-1 xs:py-1 sm:py-2 font-oswald font-bold text-[10px] xs:text-xs transform -rotate-2">
+                <div className="absolute -top-[0.25rem] xs:-top-[0.5rem] sm:-top-[0.75rem] lg:-top-[1rem] left-1/2 transform -translate-x-1/2">
+                  <div className="bg-graffiti-red text-graffiti-white px-[0.5rem] xs:px-[0.75rem] sm:px-[1rem] lg:px-[1.5rem] py-[0.25rem] xs:py-[0.25rem] sm:py-[0.5rem] font-oswald font-bold text-[0.625rem] xs:text-[0.75rem] transform -rotate-2">
                     ПОПУЛЯРНЫЙ! ⭐
                   </div>
                 </div>
               )}
 
               {/* Plan Header */}
-              <div className="text-center mb-4 xs:mb-6 sm:mb-8">
+              <div className="text-center mb-[1rem] xs:mb-[1.5rem] sm:mb-[2rem]">
                 <h3
-                  className={`text-lg xs:text-xl sm:text-2xl lg:text-3xl font-oswald font-bold mb-1 xs:mb-2 sm:mb-3 ${
+                  className={`text-[1.125rem] xs:text-[1.25rem] sm:text-[1.5rem] lg:text-[1.875rem] font-oswald font-bold mb-[0.25rem] xs:mb-[0.5rem] sm:mb-[0.75rem] ${
                     plan.color === "graffiti-red"
                       ? "text-graffiti-red"
                       : plan.color === "graffiti-gold"
@@ -111,15 +114,15 @@ const PricingSection = () => {
                 >
                   {plan.name}
                 </h3>
-                <p className="text-xs xs:text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-2 xs:mb-3 sm:mb-4">
+                <p className="text-[0.75rem] xs:text-[0.875rem] sm:text-[1rem] text-gray-600 dark:text-gray-300 mb-[0.5rem] xs:mb-[0.75rem] sm:mb-[1rem]">
                   {plan.description}
                 </p>
               </div>
 
               {/* Price */}
-              <div className="text-center mb-4 xs:mb-6 sm:mb-8">
+              <div className="text-center mb-[1rem] xs:mb-[1.5rem] sm:mb-[2rem]">
                 <div
-                  className={`text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-oswald font-bold ${
+                  className={`text-[1.25rem] xs:text-[1.5rem] sm:text-[1.875rem] lg:text-[2.5rem] font-oswald font-bold ${
                     plan.color === "graffiti-red"
                       ? "text-graffiti-red"
                       : plan.color === "graffiti-gold"
@@ -128,20 +131,20 @@ const PricingSection = () => {
                   }`}
                 >
                   {plan.price}
-                  <span className="text-xs xs:text-sm sm:text-base text-gray-500 dark:text-gray-400 block xs:inline mt-1 xs:mt-0">
+                  <span className="text-[0.75rem] xs:text-[0.875rem] sm:text-[1rem] text-gray-500 dark:text-gray-400 block xs:inline mt-[0.25rem] xs:mt-0">
                     {plan.period}
                   </span>
                 </div>
               </div>
 
               {/* Features */}
-              <ul className="space-y-2 xs:space-y-3 sm:space-y-4 mb-6 xs:mb-8 sm:mb-10">
+              <ul className="space-y-[0.5rem] xs:space-y-[0.75rem] sm:space-y-[1rem] mb-[1.5rem] xs:mb-[2rem] sm:mb-[2.5rem]">
                 {plan.features.map((feature, featureIndex) => (
                   <li
                     key={featureIndex}
-                    className="flex items-start text-xs xs:text-sm sm:text-base"
+                    className="flex items-start text-[0.75rem] xs:text-[0.875rem] sm:text-[1rem]"
                   >
-                    <span className="text-graffiti-gold mr-2 xs:mr-3 text-sm xs:text-base sm:text-lg lg:text-xl mt-0.5 flex-shrink-0">
+                    <span className="text-graffiti-gold mr-[0.5rem] xs:mr-[0.75rem] text-[0.875rem] xs:text-[1rem] sm:text-[1.125rem] lg:text-[1.25rem] mt-[0.125rem] flex-shrink-0">
                       ✓
                     </span>
                     <span className="flex-1 leading-tight">{feature}</span>
@@ -152,7 +155,7 @@ const PricingSection = () => {
               {/* CTA Button */}
               <Button
                 onClick={handleSubscribe}
-                className={`w-full py-2 xs:py-3 sm:py-4 px-4 xs:px-6 sm:px-8 text-xs xs:text-sm sm:text-base font-oswald font-bold transition-all duration-300 ${
+                className={`w-full py-[0.5rem] xs:py-[0.75rem] sm:py-[1rem] px-[1rem] xs:px-[1.5rem] sm:px-[2rem] text-[0.75rem] xs:text-[0.875rem] sm:text-[1rem] font-oswald font-bold transition-all duration-300 ${
                   plan.color === "graffiti-red"
                     ? "bg-graffiti-red hover:bg-red-600 text-graffiti-white"
                     : plan.color === "graffiti-gold"
@@ -167,10 +170,10 @@ const PricingSection = () => {
         </div>
 
         {/* Money Back Guarantee */}
-        <div className="text-center mt-8 sm:mt-12 lg:mt-16 px-4">
+        <div className="text-center mt-[2rem] sm:mt-[3rem] lg:mt-[4rem] px-[1rem]">
           <button
             onClick={() => navigate("/guarantee")}
-            className="inline-block bg-graffiti-gold text-graffiti-black px-4 sm:px-6 lg:px-8 py-3 sm:py-4 font-oswald font-bold text-base sm:text-lg lg:text-xl transform rotate-2 hover:scale-105 hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:bg-yellow-400 pulse"
+            className="inline-block bg-graffiti-gold text-graffiti-black px-[1rem] sm:px-[1.5rem] lg:px-[2rem] py-[0.75rem] sm:py-[1rem] font-oswald font-bold text-[1rem] sm:text-[1.125rem] lg:text-[1.25rem] transform rotate-2 hover:scale-105 hover:rotate-0 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:bg-yellow-400 pulse"
           >
             ГАРАНТИЯ ВОЗВРАТА 30 ДНЕЙ! 💯
           </button>
